@@ -1,0 +1,29 @@
+{
+  "foundation": {
+    "title": "Foundation Partners",
+    "items": [
+      "Arthur Dean Family Foundation",
+      "Eli Lilly and Company Foundation",
+      "Nina Mason Pulliam Charitable Trust",
+      "The Indianapolis Foundation"
+    ]
+  },
+  "government": {
+    "title": "Government Partners",
+    "items": [
+      "Indiana Criminal Justice Institute",
+      "Indiana Department of Education",
+      "Marion County Superior Court",
+      "City of Indianapolis"
+    ]
+  },
+  "community": {
+    "title": "Community Partners",
+    "items": [
+      "Indianapolis Public Schools",
+      "United Way of Central Indiana",
+      "Mental Health America of Indiana",
+      "Various Corporate Sponsors"
+    ]
+  }
+}

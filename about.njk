@@ -107,3 +107,65 @@ description: For over 50 years, Reach For Youth has been a trusted resource for 
     </div>
   </div>
 </section>
+
+<!-- PARTNERS SECTION -->
+<section class="section" aria-labelledby="partners-title">
+  <div class="container">
+    <h2 id="partners-title" class="section-title">Our Funders & Partners</h2>
+    <p class="partners__subtitle">
+      We are grateful for the organizations that make our work possible.
+    </p>
+
+    <div class="partners__categories">
+      <!-- Foundation Partners -->
+      <div class="partners__category">
+        <h3 class="partners__category-title">{{ partners.foundation.title }}</h3>
+        <div class="partners__grid">
+          {% for partner in partners.foundation.items %}
+          <div class="partner-item">
+            <div class="partner-name">{{ partner }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Government Partners -->
+      <div class="partners__category">
+        <h3 class="partners__category-title">{{ partners.government.title }}</h3>
+        <div class="partners__grid">
+          {% for partner in partners.government.items %}
+          <div class="partner-item">
+            <div class="partner-name">{{ partner }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Community Partners -->
+      <div class="partners__category">
+        <h3 class="partners__category-title">{{ partners.community.title }}</h3>
+        <div class="partners__grid">
+          {% for partner in partners.community.items %}
+          <div class="partner-item">
+            <div class="partner-name">{{ partner }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section cta-section" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 id="cta-title" class="cta-section__title">Join Our Mission</h2>
+    <p class="cta-section__text">
+      Whether you volunteer your time, make a donation, or spread the word about our work, you can help transform lives and strengthen our community.
+    </p>
+    <div class="cta-section__buttons">
+      <a href="/volunteer/" class="btn btn--secondary">Volunteer</a>
+      <a href="https://give.reachforyouth.org" class="btn btn--primary">Donate</a>
+    </div>
+  </div>
+</section>
