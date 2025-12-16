@@ -34,7 +34,7 @@ Changes are automatically deployed within ~30 seconds.
 | Contact | Contact form settings, office hours |
 
 ### People
-- **Staff** - Staff member profiles (name, title, bio, photo)
+- **Staff Members** - Staff profiles (name, title, photo)
 - **Board Members** - Board of directors information
 
 ## Content Editing Tips
