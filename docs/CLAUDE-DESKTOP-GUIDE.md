@@ -6,118 +6,102 @@ You describe what you want. Claude clones the repo, makes the edits, and pushes 
 
 ---
 
-## What Claude Can Do For You
+## Quick Start: Install the Skill
 
-- Clone and set up the website project automatically
-- Make design changes (colors, layouts, fonts, spacing)
-- Create new pages
-- Fix display issues
-- Update multiple pieces of content at once
-- Commit and push changes to make them live
-- Explain how any part of the site works
+I've created a skill that teaches Claude everything about the RFY website. Install it once and Claude will know how to help.
+
+**On Mac, open Terminal and run:**
+```bash
+# Create the skills folder if it doesn't exist
+mkdir -p ~/.claude/skills
+
+# Clone the website repo (if you haven't already)
+git clone https://github.com/vwieczorek/rfy-website ~/rfy-website
+
+# Copy the skill
+cp -r ~/rfy-website/skill/rfy-website ~/.claude/skills/
+```
+
+That's it. Claude now knows the site structure, where files live, and how to push changes.
 
 ---
 
 ## One-Time Setup: Connect GitHub
 
-Before Claude can push changes to the live site, you need to connect your GitHub account:
+Before Claude can push changes to the live site, connect your GitHub account:
 
 1. Open Claude Desktop
 2. Go to the **Code** tab
 3. Click the **...** menu, then **Connectors**
 4. Enable **GitHub** and authorize the connection
 
-This lets Claude clone repos and push changes on your behalf.
-
 ---
 
 ## Making Changes
 
-### Start a Session
+### Option 1: Use the Skill Directly
 
-1. Open Claude Desktop
-2. Go to the **Code** tab
-3. Start a new session
+Type `/rfy-website` followed by what you want:
 
-### Tell Claude What You Want
+```
+/rfy-website Update the main phone number to (317) 555-1234
+```
 
-Describe your goal in plain language. Claude handles the rest.
+```
+/rfy-website Add a new staff member: Sarah Chen, Director of Clinical Services
+```
 
-**First time setup:**
-> "Clone the RFY website from https://github.com/vwieczorek/rfy-website and help me make some changes."
+```
+/rfy-website The buttons are too bright green. Make them a deeper forest green.
+```
 
-Claude will clone the repo and set up a working copy.
+```
+/rfy-website Create a new page for summer programs with the same layout as services
+```
 
-**Then describe your change:**
-> "The green on the buttons is too bright. Make it a deeper forest green."
+### Option 2: Just Describe What You Want
 
-> "Add a new staff member: Sarah Chen, Director of Clinical Services. I'll give you her photo."
+Claude recognizes when you're talking about the website and loads the skill automatically:
 
-> "The testimonials section looks cramped on mobile. Can you add more spacing?"
+> "I need to update the RFY website. The testimonials section looks cramped on mobile."
 
-> "Create a new page for our summer programs with the same layout as the services page."
+> "Can you fix the phone number on the RFY contact page?"
 
 ### Review and Approve
 
-Claude will show you what it plans to change. In **Ask mode** (recommended), you approve each edit before it happens. You'll see a diff showing exactly what's changing.
+Claude shows you what it plans to change. In **Ask mode**, you approve each edit before it happens. You'll see exactly what's changing.
 
 ### Push Changes Live
 
-When you're happy with the changes, tell Claude:
-> "Commit these changes and push them to GitHub."
+When you're happy, tell Claude to push:
 
-Claude will commit with a descriptive message and push. The site rebuilds automatically in about 30 seconds.
+> "Commit and push these changes"
+
+The site rebuilds automatically in about 30 seconds.
 
 ---
 
-## Example Session
+## What Claude Knows (from the Skill)
 
-**You:** Clone the RFY website repo and help me update it.
+The skill teaches Claude:
 
-**Claude:** I'll clone the repository now.
-```
-git clone https://github.com/vwieczorek/rfy-website
-```
-Done. The website is ready. What would you like to change?
-
-**You:** The phone number in the footer is wrong. It should be (317) 555-1234.
-
-**Claude:** I found the phone number in `_data/site.json`. Here's the change:
-```
-- "main": "3179200900",
-+ "main": "3175551234",
-```
-Should I apply this edit?
-
-**You:** Yes.
-
-**Claude:** Done. Want me to commit and push this change?
-
-**You:** Yes, push it.
-
-**Claude:** Committed as "Update main phone number" and pushed to main. The site will rebuild in about 30 seconds.
+- **Repository:** https://github.com/vwieczorek/rfy-website
+- **Content files:** JSON files in `_data/` (staff, stats, testimonials, etc.)
+- **Page templates:** `.njk` files in the root
+- **Styling:** `css/style.css`
+- **How to push:** Commit to `main`, auto-deploys to Cloudflare Pages
 
 ---
 
 ## Tips
 
-**Use Ask mode when starting out.** You'll approve each change before it happens. Once you're comfortable, Code mode lets Claude work faster by auto-approving file edits.
+**Use Ask mode when starting out.** You approve each change before it happens.
 
-**Be specific about what you want.** "Make it look better" is hard to act on. "Increase the font size of the headlines" is clear.
+**Be specific.** "Make it look better" is vague. "Increase the headline font size" is clear.
 
-**You can always undo.** Every change is saved in git history. If something breaks, tell Claude to revert the last commit.
+**You can always undo.** Tell Claude to "revert the last commit" if something breaks.
 
-**Ask Claude to explain things.** "How does the homepage pull in the statistics?" or "What file controls the navigation menu?" Claude can walk you through the codebase.
-
----
-
-## Permission Modes
-
-| Mode | What Happens |
-|------|--------------|
-| **Ask** | Claude asks before each file edit or command. Best for learning. |
-| **Code** | Claude auto-approves file edits, still asks before terminal commands. Faster. |
-| **Plan** | Claude creates a full plan for your approval before making any changes. Good for complex tasks. |
+**Ask questions.** "How does the homepage pull in statistics?" Claude can explain any part of the site.
 
 ---
 
@@ -139,21 +123,33 @@ Should I apply this edit?
 ## Troubleshooting
 
 **"I don't have access to that repository"**
-Make sure GitHub is connected in Connectors. You also need to be a collaborator on the repo (Victor sets this up).
+Connect GitHub in Connectors. You also need collaborator access (Victor sets this up).
 
 **Changes aren't showing on the live site**
-Did Claude push the changes? Ask "Did you push to GitHub?" If yes, wait 60 seconds and hard refresh your browser (Ctrl+Shift+R or Cmd+Shift+R).
+Ask Claude "Did you push?" If yes, wait 60 seconds and hard refresh (Ctrl+Shift+R or Cmd+Shift+R).
 
 **I made a mistake**
-Tell Claude: "Revert the last commit" or "Undo that change." Git keeps full history.
+Tell Claude: "Revert the last commit"
 
-**Claude seems stuck**
-Start a new session. Sometimes a fresh start helps.
+**Skill not found**
+Make sure you copied the skill folder to `~/.claude/skills/rfy-website/`
+
+---
+
+## Updating the Skill
+
+If Victor updates the skill with new instructions:
+
+```bash
+cd ~/rfy-website
+git pull
+cp -r skill/rfy-website ~/.claude/skills/
+```
 
 ---
 
 ## Getting Help
 
-- For CMS questions: See `EDITING-GUIDE.md`
-- For technical details: See `README.md`
-- For anything else: Ask Claude, or reach out to Victor
+- CMS questions: See `EDITING-GUIDE.md`
+- Technical details: See `README.md`
+- Anything else: Ask Claude, or reach out to Victor
