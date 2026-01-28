@@ -1,16 +1,15 @@
 # Getting Started: Managing the RFY Website
 
-**Welcome, Melissa!** This guide will help you manage the Reach For Youth website independently.
+This guide walks you through taking ownership of the Reach For Youth website. Once set up, you'll be able to update content, add photos, and make changes that go live automatically — no waiting on anyone else.
 
 ---
 
 ## What You'll Be Able to Do
 
-- ✅ Update text, photos, staff info, stats, testimonials
-- ✅ Add new content (events, stories, volunteer opportunities)
-- ✅ Make changes that go live automatically in ~30 seconds
-- ✅ Use AI (Claude) to help with more advanced edits
-- ✅ Full ownership — no dependency on Victor for day-to-day updates
+- Update text, photos, staff profiles, statistics, testimonials
+- Add new content (events, stories, volunteer opportunities)
+- See changes go live automatically in about 30 seconds
+- Use AI assistance for more complex edits when needed
 
 ---
 
@@ -18,23 +17,23 @@
 
 | Method | Best For | Skill Level |
 |--------|----------|-------------|
-| **Web CMS** | Quick content updates (text, photos, stats) | Easy — like editing a Google Doc |
-| **Claude Desktop** | Design changes, new pages, complex edits | Intermediate — AI guides you |
+| **Web CMS** | Quick content updates (text, photos, stats) | Straightforward — similar to editing a Google Doc |
+| **Claude Desktop** | Design changes, new pages, complex edits | More involved — AI guides you through it |
 
-**Start with the Web CMS.** It handles 90% of what you'll need. Graduate to Claude Desktop when you're comfortable.
+Start with the Web CMS. It handles the vast majority of what you'll need day-to-day.
 
 ---
 
-## Step 1: Get a GitHub Account
+## Step 1: Create a GitHub Account
 
-GitHub is where the website files live. You need a free account to make changes.
+GitHub is where the website files live. You'll need a free account to make changes.
 
 1. Go to [github.com/signup](https://github.com/signup)
-2. Create an account with your work email (melissa@reachforyouth.org recommended)
-3. **Save your password somewhere safe** (1Password, written down, etc.)
-4. Tell Victor your GitHub username so he can give you access
+2. Create an account (your work email is fine)
+3. Save your password somewhere safe
+4. Send Victor your GitHub username so he can grant you access
 
-**Why GitHub?** It's like Google Drive for code — tracks every change, lets you undo mistakes, and powers the automatic updates.
+GitHub works like a version-controlled file system — it tracks every change and lets you undo mistakes. All the automation runs through it.
 
 ---
 
@@ -44,7 +43,7 @@ Once Victor adds you as a collaborator:
 
 1. Check your email for an invitation from GitHub
 2. Click "Accept invitation"
-3. You now have access to edit the website!
+3. You now have access to edit the website
 
 ---
 
@@ -54,24 +53,23 @@ Once Victor adds you as a collaborator:
 2. Go to: **https://rfy.thewicksproject.org/admin/**
 3. Click **"Login with GitHub"**
 4. Authorize the connection (first time only)
-5. You're in!
 
-**Bookmark this link** — it's your main editing dashboard.
+Bookmark this link — it's your main editing dashboard.
 
 ---
 
 ## Making Your First Edit
 
-Let's update something simple to see how it works:
+Try something simple to see how the flow works:
 
-1. In the CMS, click **Site Settings** → **Organization Info**
+1. In the CMS, click **Site Settings** then **Organization Info**
 2. Find a field (like the tagline) and make a small change
 3. Click **Publish** (top right)
-4. Wait 30 seconds
-5. Open https://rfy.thewicksproject.org in a new tab
-6. See your change live!
+4. Wait about 30 seconds
+5. Open the live site in a new tab: https://rfy.thewicksproject.org
+6. Refresh and see your change
 
-**Congratulations!** You just updated the website.
+That's the whole process. Edit, publish, wait, done.
 
 ---
 
@@ -87,34 +85,31 @@ Let's update something simple to see how it works:
 | **Donate** | Donation impact descriptions |
 | **Volunteer** | Volunteer opportunities |
 | **Success Stories** | Testimonials, featured stories |
-| **Services** | Mental health & restorative justice info |
+| **Services** | Mental health and restorative justice program info |
 
 ---
 
-## Tips for Success
+## Working with Images
 
-### Before Publishing
-- **Preview your changes** — Open the live site in another tab to compare
-- **Save drafts** — Use "Save" (not "Publish") if you're not ready
-
-### Images
 - **Size limit:** Under 5MB
-- **Formats:** JPG or PNG work best
-- **Tip:** Compress large photos at [squoosh.app](https://squoosh.app) first
-
-### If Something Goes Wrong
-- Every change is saved in GitHub history
-- You can always undo by contacting Victor
-- The site auto-rebuilds, so wait 60 seconds before panicking
+- **Formats:** JPG or PNG
+- **Tip:** If photos are too large, compress them at [squoosh.app](https://squoosh.app) first
 
 ---
 
-## Next Steps (Optional)
+## If Something Goes Wrong
 
-When you're ready for more advanced edits, see:
-- `CLAUDE-DESKTOP-GUIDE.md` — Using AI to help with complex changes
+Every change is saved in GitHub's history. Nothing is permanent until you want it to be. If you make a mistake, you can always go back — just reach out to Victor for help rolling back if needed.
+
+---
+
+## Next Steps
+
+When you're comfortable with the CMS and want to tackle more advanced edits:
+
+- `CLAUDE-DESKTOP-GUIDE.md` — Using AI assistance for complex changes
 - `EDITING-GUIDE.md` — Detailed CMS walkthrough
-- `README.md` — Technical overview
+- `README.md` — Technical overview of how the site works
 
 ---
 
@@ -130,7 +125,5 @@ When you're ready for more advanced edits, see:
 
 ## Questions?
 
-- **Content questions:** You've got this!
+- **Content questions:** The CMS is designed to be self-explanatory — explore and experiment
 - **Technical issues:** Contact Victor
-
-*Welcome to website ownership!* 🎉

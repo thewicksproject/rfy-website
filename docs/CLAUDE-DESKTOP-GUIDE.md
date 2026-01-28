@@ -1,19 +1,18 @@
-# Using Claude Desktop to Edit the RFY Website
+# Using Claude Desktop for Website Edits
 
-**For Melissa** — When you need to make changes beyond what the web CMS can do.
+This guide is for when you need to make changes beyond what the web CMS can handle — design adjustments, new pages, layout fixes, or anything that requires editing the underlying files.
+
+The approach: you describe what you want in plain English, and Claude reads the website files and makes the changes for you.
 
 ---
 
 ## What Claude Desktop Can Help With
 
-- 🎨 Design changes (colors, layouts, spacing)
-- 📄 Creating new pages
-- 🔧 Fixing things that look broken
-- 💡 "I want to change X but don't know how"
-- 📝 Bulk content updates
-- 🤔 Understanding how the site works
-
-**The magic:** You describe what you want in plain English, Claude reads the files, and makes the changes for you.
+- Design changes (colors, layouts, spacing)
+- Creating new pages
+- Fixing display issues
+- Bulk content updates
+- Understanding how any part of the site works
 
 ---
 
@@ -22,118 +21,83 @@
 1. Go to [claude.ai/download](https://claude.ai/download)
 2. Download the Mac or Windows version
 3. Install and open the app
-4. Create a free account (or sign in if you have one)
+4. Create a free account or sign in
 
-**Free tier works fine** for website editing. Pro ($20/mo) gives you more messages per day.
+The free tier works well for website editing. The paid tier ($20/month) provides more messages per day if you need it.
 
 ---
 
-## Step 2: Download the Website Files
+## Step 2: Get the Website Files
 
 You'll need a local copy of the website to work with.
 
-### Option A: Download ZIP (Easiest)
+### Option A: Download as ZIP
 
 1. Go to https://github.com/vwieczorek/rfy-website
-2. Click the green **"Code"** button
-3. Click **"Download ZIP"**
-4. Unzip the folder somewhere easy to find (like Desktop)
+2. Click the green **Code** button
+3. Click **Download ZIP**
+4. Unzip the folder somewhere accessible (Desktop works fine)
 
-### Option B: Use GitHub Desktop (Better for ongoing edits)
+### Option B: Use GitHub Desktop
+
+This is better for ongoing work since you can sync changes back to the live site directly.
 
 1. Download [GitHub Desktop](https://desktop.github.com/)
 2. Sign in with your GitHub account
-3. Click **File → Clone Repository**
+3. Click **File** then **Clone Repository**
 4. Find `vwieczorek/rfy-website` and clone it
-5. Choose where to save it (Desktop or Documents)
-
-**GitHub Desktop advantage:** You can sync changes back to the live site with one click.
+5. Choose where to save it
 
 ---
 
 ## Step 3: Open the Project in Claude
 
 1. Open Claude Desktop
-2. Click **"Add folder"** or drag the `rfy-website` folder into the chat
-3. Claude now has access to all the website files!
+2. Click **Add folder** or drag the `rfy-website` folder into the chat
+3. Claude now has access to all the website files
 
 ---
 
-## Step 4: Ask Claude to Help
+## Step 4: Describe What You Need
 
-Just describe what you want in plain English. Examples:
+Just explain what you want in plain language. Claude will figure out which files to change and how.
 
-### Change Colors
-> "The green color on the buttons feels too bright. Can you make it a deeper forest green?"
+**Examples:**
 
-### Update Layout
-> "I want the staff photos to be in a 3-column grid instead of 4 columns on desktop."
+> "The green on the buttons feels too bright. Can you make it a deeper, more muted green?"
 
-### Add Content
+> "I want the staff photos in a 3-column grid instead of 4 on desktop."
+
 > "Add a new volunteer opportunity called 'Event Support' with these details: [paste details]"
 
-### Fix Something
-> "The phone number on the contact page looks wrong on mobile. Can you check it?"
+> "The phone number looks odd on mobile. Can you check what's going on?"
 
-### Understand the Site
-> "How do I add a completely new page to the website?"
+> "How would I add a completely new page to this site?"
 
 ---
 
-## Step 5: Review and Apply Changes
+## Step 5: Apply the Changes
 
-Claude will:
-1. Show you what files need to change
-2. Explain what each change does
-3. Give you the updated code
+Claude will show you what files need to change and explain what each change does.
 
-**To apply the changes:**
+**If you downloaded as ZIP:**
+1. Copy Claude's code into the relevant files
+2. Upload the changed files to GitHub through the web interface
 
-### If You Downloaded ZIP:
-1. Copy Claude's code changes into the files
-2. Upload the changed files to GitHub (via the web interface)
-
-### If You Used GitHub Desktop:
+**If you're using GitHub Desktop:**
 1. Let Claude edit the files directly
-2. Open GitHub Desktop
-3. You'll see your changes listed
-4. Write a short description (e.g., "Updated button colors")
-5. Click **"Commit to main"**
-6. Click **"Push origin"**
-7. Wait 30-60 seconds — your changes are live!
+2. Open GitHub Desktop — you'll see your changes listed
+3. Write a brief description of what you changed
+4. Click **Commit to main**
+5. Click **Push origin**
+6. Wait 30-60 seconds — the site rebuilds automatically
 
 ---
 
-## Example Conversation
+## File Reference
 
-**You:** I want to add a new staff member. Her name is Sarah Chen, she's the Director of Clinical Services, and I have her headshot saved on my desktop.
-
-**Claude:** I'll help you add Sarah to the staff directory. Here's what we need to do:
-
-1. First, let me add her photo to the images folder. Can you drag `sarah-chen.jpg` into this chat?
-
-2. Then I'll update `_data/staff.json` to add her entry:
-
-```json
-{
-  "name": "Sarah Chen",
-  "title": "Director of Clinical Services",
-  "image": "/images/staff/sarah-chen.jpg"
-}
-```
-
-Want me to make these changes?
-
-**You:** Yes, do it!
-
-**Claude:** Done! I've added Sarah's entry to the staff list. Commit and push to see her on the live site.
-
----
-
-## File Structure Cheat Sheet
-
-| If You Want To Change... | Edit This File |
-|--------------------------|----------------|
+| To change... | Edit this file |
+|--------------|----------------|
 | Organization info (phone, email) | `_data/site.json` |
 | Staff members | `_data/staff.json` |
 | Board members | `_data/board.json` |
@@ -147,58 +111,45 @@ Want me to make these changes?
 
 ## Tips
 
-### Keep It Simple
-Start with small changes. "Change this text" before "redesign this page."
+**Describe the problem, not the solution.** Instead of "change line 47 of style.css," say "the heading text is too small on mobile." Claude will handle the technical details.
 
-### Describe the Problem, Not the Solution
-Instead of: "Change line 47 of style.css"
-Try: "The heading text is too small on mobile"
+**Start small.** Try a simple text change before attempting a page redesign.
 
-Claude will figure out the technical details.
+**Preview locally.** You can open HTML files in your browser to see changes before pushing them live.
 
-### Test Before Pushing
-Open the local files in your browser to preview changes before pushing to the live site.
-
-### Ask Questions
-Not sure how something works? Just ask Claude to explain it.
-
----
-
-## Troubleshooting
-
-### "Claude can't see my files"
-Make sure you added the folder to the chat. Look for a folder icon in the input area.
-
-### "My changes aren't showing up"
-1. Did you commit AND push? (Both steps required)
-2. Wait 60 seconds for the site to rebuild
-3. Hard refresh your browser (Ctrl+Shift+R or Cmd+Shift+R)
-
-### "I broke something"
-Don't panic! Every change is saved in GitHub history. Contact Victor to roll back.
-
-### "Claude is confused"
-Start a new chat and re-add the folder. Sometimes a fresh start helps.
+**Ask questions.** If you're not sure how something works, just ask Claude to explain it.
 
 ---
 
 ## When to Use CMS vs Claude
 
-| Task | Use CMS | Use Claude |
-|------|---------|------------|
-| Update phone number | ✅ | |
-| Add staff photo | ✅ | |
-| Change button color | | ✅ |
-| Add new page | | ✅ |
-| Update testimonial | ✅ | |
-| Fix mobile layout | | ✅ |
-| Change stats | ✅ | |
-| Redesign section | | ✅ |
+| Task | CMS | Claude |
+|------|-----|--------|
+| Update phone number | Yes | |
+| Add staff photo | Yes | |
+| Change button color | | Yes |
+| Add new page | | Yes |
+| Update testimonial | Yes | |
+| Fix mobile layout | | Yes |
+| Change statistics | Yes | |
+| Redesign a section | | Yes |
 
 ---
 
-## Getting More Help
+## Troubleshooting
 
-- **CMS issues:** See `EDITING-GUIDE.md`
-- **Technical deep dive:** See `README.md`
-- **Stuck:** Ask Claude! Or contact Victor.
+**Claude can't see the files:** Make sure you added the folder to the chat. Look for a folder icon in the input area.
+
+**Changes aren't showing up:** Did you both commit AND push? Both steps are required. Then wait 60 seconds and hard refresh (Ctrl+Shift+R or Cmd+Shift+R).
+
+**Something broke:** Every change is saved in GitHub history. Contact Victor to roll back to a previous version.
+
+**Claude seems confused:** Start a fresh chat and re-add the folder.
+
+---
+
+## Getting Help
+
+- CMS issues: See `EDITING-GUIDE.md`
+- Technical details: See `README.md`
+- Stuck on something: Ask Claude, or reach out to Victor
