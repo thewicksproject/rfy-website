@@ -1,43 +1,30 @@
 # Getting Started: Managing the RFY Website
 
-You'll use Claude to manage the website. Tell Claude what you want in plain English and it handles the rest.
+You manage the website through Claude. Open Claude Desktop, go to the Cowork tab, and describe what you want changed.
 
-**Main guide:** See `CLAUDE-DESKTOP-GUIDE.md` for complete setup and usage instructions.
-
----
-
-## Quick Start
-
-Once you've completed the setup in the Claude guide:
-
-1. Open Claude Desktop
-2. Click the **Code** tab
-3. Type `/rfy-website` followed by what you want
-
-**Examples:**
-
-```
-/rfy-website Update the main phone number to (317) 555-1234
-```
-
-```
-/rfy-website Add a new staff member: Sarah Chen, Director of Clinical Services
-```
-
-```
-/rfy-website Update youth served to 950 for this year
-```
-
-Claude makes the changes, shows you what it did, and pushes them live when you approve.
+**Full guide:** See `CLAUDE-DESKTOP-GUIDE.md`
 
 ---
 
-## Setup Checklist
+## Quick Setup
 
-- [ ] GitHub account created
-- [ ] Collaborator invitation accepted
-- [ ] Claude skill installed (Terminal commands in Claude guide)
-- [ ] GitHub connected in Claude Desktop (Code tab > ... > Connectors)
+1. Create a GitHub account (github.com/signup)
+2. Send Victor your username and accept the invitation
+3. Open Claude Desktop → Cowork tab → ... → Connectors → Enable GitHub
+
+---
+
+## Making Changes
+
+In Claude Desktop, click the **Cowork** tab and describe what you need:
+
+> Update the RFY website. Change the phone number to (317) 555-1234.
+
+> Add a new staff member to the RFY site: Sarah Chen, Director of Clinical Services.
+
+> Update youth served on the RFY website to 950.
+
+Claude handles everything else.
 
 ---
 
@@ -45,25 +32,16 @@ Claude makes the changes, shows you what it did, and pushes them live when you a
 
 | What You Want | What to Tell Claude |
 |---------------|---------------------|
-| Update contact info | `/rfy-website Change the phone to...` |
-| Add/edit staff | `/rfy-website Add staff member: [name], [title]` |
-| Update stats | `/rfy-website Change youth served to...` |
-| Add testimonial | `/rfy-website Add testimonial: "[quote]" - [name]` |
-| Fix something | `/rfy-website The [thing] looks wrong on mobile` |
-| New page | `/rfy-website Create a page for [topic]` |
-
----
-
-## Backup Option
-
-If Claude is unavailable, there's a web editor at https://rfy.thewicksproject.org/admin/
-
-Log in with GitHub. See `EDITING-GUIDE.md` for details.
+| Update contact info | "Change the RFY phone to..." |
+| Add staff | "Add staff member to RFY: [name], [title]" |
+| Update stats | "Change youth served on RFY to..." |
+| Add testimonial | "Add testimonial to RFY: '[quote]' - [name]" |
+| Fix something | "The RFY [thing] looks wrong on mobile" |
 
 ---
 
 ## Help
 
-- Full Claude instructions: `CLAUDE-DESKTOP-GUIDE.md`
-- Web editor details: `EDITING-GUIDE.md`
+- Full instructions: `CLAUDE-DESKTOP-GUIDE.md`
+- Web editor backup: `EDITING-GUIDE.md`
 - Technical questions: Contact Victor

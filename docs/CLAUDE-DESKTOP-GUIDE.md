@@ -1,157 +1,110 @@
 # Managing the RFY Website with Claude
 
-Claude handles all your website updates. Describe what you want in plain English and Claude makes the changes, shows you what it did, and pushes them live.
-
----
-
-## Prerequisites
-
-- **Claude Desktop app** (the downloadable app from claude.ai/download, not the web version)
-- **A GitHub account** with collaborator access to the repo (Victor sets this up)
+Open Claude Desktop, go to the Cowork tab, and describe what you want. Claude handles the rest.
 
 ---
 
 ## Setup (One Time)
 
-### Step 1: Install the Skill
+### Step 1: Get GitHub Access
 
-The skill teaches Claude everything about the RFY website.
+1. Create a GitHub account at github.com/signup if you don't have one
+2. Send Victor your username
+3. Accept the invitation when it arrives
 
-**Open Terminal:** Press Cmd+Space to open Spotlight, type "Terminal", and press Enter. You'll see a window where you paste commands and press Enter to run them.
-
-**Paste this command:**
-
-```bash
-mkdir -p ~/.claude/skills
-```
-
-**Then paste this one:**
-
-```bash
-curl -L https://github.com/vwieczorek/rfy-website/archive/refs/heads/main.zip -o /tmp/rfy.zip && unzip -o /tmp/rfy.zip -d /tmp && cp -r /tmp/rfy-website-main/skill/rfy-website ~/.claude/skills/
-```
-
-Done. (The `~` means your home folder. These are hidden system folders Claude uses internally.)
-
-### Step 2: Connect GitHub
+### Step 2: Connect GitHub to Claude
 
 1. Open Claude Desktop
-2. Click the **Code** tab at the top (not Chat)
+2. Click the **Cowork** tab
 3. Click the **...** menu, then **Connectors**
 4. Enable **GitHub** and authorize the connection
+
+That's it. You're ready.
 
 ---
 
 ## Making Changes
 
-### Start a Session
+### Start a Task
 
 1. Open Claude Desktop
-2. Click the **Code** tab
-3. Start a new session
-
-### Tell Claude What You Need
-
-Type `/rfy-website` followed by what you want. The slash tells Claude to load the skill. Include a space after it.
+2. Click the **Cowork** tab
+3. Describe what you want
 
 **Examples:**
 
-```
-/rfy-website Update the main phone number to (317) 555-1234
-```
+> Update the RFY website. Change the main phone number to (317) 555-1234.
 
-```
-/rfy-website Add a new staff member: Sarah Chen, Director of Clinical Services
-```
+> I need to update the RFY website. Add a new staff member: Sarah Chen, Director of Clinical Services.
 
-```
-/rfy-website Update the youth served stat to 912
-```
+> Update the youth served statistic on the RFY website to 912.
 
-```
-/rfy-website Add a testimonial from a parent: "This program saved my son's life."
-```
+> The RFY website buttons are too bright green. Make them a deeper forest green.
 
-```
-/rfy-website The buttons are too bright green. Make them a deeper forest green.
-```
+> Add a testimonial to the RFY website from a parent: "This program saved my son's life."
 
-```
-/rfy-website Create a new page for summer programs
-```
+> Create a new page on the RFY website for summer programs.
 
-Or just describe what you want naturally. Claude recognizes when you're talking about the RFY website.
+Claude will:
+1. Clone the website repository
+2. Find the right files to edit
+3. Make the changes
+4. Show you what it did
+5. Push the changes live (with your approval)
 
-### Review and Approve
-
-By default, Claude uses **Ask mode**: it shows you what it plans to change and waits for approval before each edit. This is the safest way to work.
-
-To change modes, look for the mode selector next to the send button:
-- **Ask** - Claude asks before each change (recommended)
-- **Code** - Claude auto-approves file edits, asks before commands
-- **Plan** - Claude creates a full plan for approval first
-
-### Push Changes Live
-
-When you're happy, tell Claude:
-
-> "Commit and push these changes"
-
-The site rebuilds automatically in about 30 seconds.
-
----
-
-## Common Tasks
-
-| What You Want | What to Tell Claude |
-|---------------|---------------------|
-| Update phone/email/address | `/rfy-website Change the phone number to...` |
-| Add staff member | `/rfy-website Add new staff: [name], [title]` |
-| Update statistics | `/rfy-website Update youth served to 950` |
-| Add testimonial | `/rfy-website Add a testimonial from [name]: "[quote]"` |
-| Change colors | `/rfy-website Make the green buttons darker` |
-| Fix mobile display | `/rfy-website The testimonials are cramped on mobile` |
-| Add new page | `/rfy-website Create a page for [topic]` |
-| Update event info | `/rfy-website Update Rise & Shine to Fall 2026` |
+The site rebuilds automatically in about 30 seconds after changes are pushed.
 
 ---
 
 ## Tips
 
-**Start with Ask mode.** You approve each change before it happens.
-
 **Be specific.** "Make it look better" is vague. "Increase the headline font size" is clear.
 
-**You can always undo.** Tell Claude to "revert the last commit" if something breaks.
+**You can watch or walk away.** Cowork shows you progress in real time, but you can also step away and come back when it's done.
+
+**Review before pushing.** Claude will show you what changed and ask before pushing to the live site.
+
+**You can always undo.** Tell Claude to "revert the last commit" if something goes wrong.
 
 **Ask questions.** "How does the homepage pull in statistics?" Claude can explain any part of the site.
+
+---
+
+## Common Requests
+
+| What You Want | What to Tell Claude |
+|---------------|---------------------|
+| Update phone/email | "Change the RFY phone number to..." |
+| Add staff member | "Add a new staff member to the RFY site: [name], [title]" |
+| Update statistics | "Update youth served on the RFY site to 950" |
+| Add testimonial | "Add a testimonial to the RFY site: '[quote]' - [name]" |
+| Change colors | "The RFY website buttons are too bright, make them darker" |
+| Fix display issue | "The RFY testimonials section is cramped on mobile" |
+| Add new page | "Create a new page on the RFY site for [topic]" |
 
 ---
 
 ## Troubleshooting
 
 **"I don't have access to that repository"**
-Make sure GitHub is connected in Connectors (Code tab > ... > Connectors). You also need collaborator access to the repo.
-
-**Skill not found when I type /rfy-website**
-Re-run the install commands from Step 1.
+Make sure GitHub is connected (Cowork tab > ... > Connectors > GitHub). You also need collaborator access to the repo (ask Victor).
 
 **Changes aren't showing on the live site**
-Ask Claude "Did you push?" If yes, wait 60 seconds and hard refresh (Cmd+Shift+R).
+Ask Claude "Did you push the changes?" If yes, wait 60 seconds and refresh the page (Cmd+Shift+R).
 
-**I made a mistake**
-Tell Claude: "Revert the last commit"
-
----
-
-## Updating the Skill
-
-If Victor updates the skill, re-run the curl command from Step 1.
+**Something went wrong**
+Tell Claude: "Revert the last commit on the RFY website"
 
 ---
 
-## Backup Option: Web Editor
+## Backup Option
 
-If Claude is unavailable or you prefer a visual editor for simple text changes, there's a web-based CMS at https://rfy.thewicksproject.org/admin/
+If Claude is unavailable, there's a web editor at https://rfy.thewicksproject.org/admin/
 
 Log in with your GitHub account. See `EDITING-GUIDE.md` for details.
+
+---
+
+## Questions?
+
+Ask Claude, or reach out to Victor.
