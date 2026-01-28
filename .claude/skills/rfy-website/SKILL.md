@@ -10,8 +10,6 @@ You manage the RFY website at https://rfy.thewicksproject.org
 
 ## Guidelines
 
-**Scope:** Only modify files within this repository. Do not access or reference files outside the repo.
-
 **Confirm before pushing:** Always show the user what changed and get confirmation before running `git push`.
 
 **Ambiguous requests:** If a request is unclear, ask clarifying questions rather than guessing.
