@@ -138,25 +138,36 @@ collections:
         label: "Staff Members"
         file: "_data/staff.json"
         fields:
-          - label: "Staff Members"
-            name: "items"
+          - label: "Departments"
+            name: "departments"
             widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Photo", name: "image", widget: "image", required: false }
+              - { label: "Department Name", name: "name", widget: "string" }
+              - label: "Members"
+                name: "members"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Photo", name: "image", widget: "image", required: false }
+                  - { label: "Bio", name: "bio", widget: "text", required: false }
+                  - { label: "Favorite Quote", name: "quote", widget: "string", required: false }
+                  - { label: "Quote Author", name: "quoteAuthor", widget: "string", required: false }
 
       - name: "board"
         label: "Board Members"
         file: "_data/board.json"
         fields:
-          - label: "Board Members"
-            name: "items"
+          - label: "Officers"
+            name: "officers"
             widget: "list"
             fields:
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Photo", name: "image", widget: "image", required: false }
+              - { label: "Role", name: "role", widget: "string", required: false }
+          - label: "Members"
+            name: "members"
+            widget: "list"
+            field: { label: "Name", name: "name", widget: "string" }
 
   # =====================
   # ABOUT PAGE

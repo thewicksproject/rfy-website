@@ -1,34 +1,107 @@
 {
-  "items": [
+  "departments": [
     {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
+      "name": "Administrative Leadership Team",
+      "members": [
+        {
+          "name": "Kendee Kolp",
+          "title": "President, Chief Executive Officer",
+          "image": "/images/staff/Kendee Kolp 25.png",
+          "bio": "Kendee began her service to youth and families over 30 years ago and spent 26 years with the YMCA. She joined the Reach For Youth team in 2015 and believes in the powerful mission - Providing youth second chances through prevention, intervention and counseling.\n\nShe has previous experience in both annual and capital fundraising, operations, developing board and staff teams and programming. Kendee is a graduate of Purdue University, West Lafayette, IN; Bachelor of Science in Child Development and Family Studies.",
+          "quote": "",
+          "quoteAuthor": ""
+        },
+        {
+          "name": "Mark Sattler, LMFT, LMHC, LCAC",
+          "title": "Chief Operating Officer",
+          "image": "/images/staff/Mark Sattler.jpg",
+          "bio": "Since joining Reach For Youth in 2022, Mark has brought 15 years of experience in mental health and non-profit services across Central Indiana. He has served on numerous boards including Marion County Community Corrections and the Indiana Council Addictions Committee, and is a frequent speaker on mental health and addictions.\n\nMark holds graduate degrees from Concordia University Chicago and Indiana Wesleyan University and is licensed in marriage and family therapy, mental health, and addictions.",
+          "quote": "Life's most persistent and urgent question is: What are you doing for others?",
+          "quoteAuthor": "Martin Luther King, Jr."
+        },
+        {
+          "name": "Cassie Meadows",
+          "title": "Admin Supervisor & Billing Specialist",
+          "image": "/images/staff/Cassie 2035.jpg",
+          "bio": "Cassie joined Reach For Youth in 2023 as Administrative Coordinator for the Greenwood location and became Administrative Supervisor in April 2024. She is passionate about supporting the team and ensuring smooth operations.\n\nCassie is married with two boys and two dogs. On most weekends, you'll find her guiding trail rides with her dad or hunting and fishing with her husband. She also enjoys gardening, remodeling projects, and relaxing by the pool.",
+          "quote": "Growth is painful. Change is painful. But nothing is as painful as staying stuck somewhere you don't belong.",
+          "quoteAuthor": "Mandy Hale"
+        }
+      ]
     },
     {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
+      "name": "Clinical Staff Team",
+      "members": [
+        {
+          "name": "Denise Senter, LMHC",
+          "title": "Director of Mental Health and Clinical Services",
+          "image": "/images/staff/Denise Senter 25.png",
+          "bio": "Denise is a licensed Marriage and Family Therapist with nearly 30 years of experience serving families and children. Her specializations include mood and behavioral disorders, trauma (domestic violence, sexual and physical abuse), attachment difficulties, and cross-cultural competency.\n\nShe has served as a trainer and consultant to organizations throughout Indiana and professional athletes. Denise is a published author on mental health and serves on the Board of Directors with Infancy Onward.",
+          "quote": "Always do your best. What you plant now, you will harvest later.",
+          "quoteAuthor": "Og Mandino"
+        },
+        {
+          "name": "Ashlyn Douthitt, LMFT, CFLE",
+          "title": "Director of Clinical Training & Professional Development",
+          "image": "/images/staff/Ashlyn.jpg",
+          "bio": "Ashlyn Douthitt is a licensed marriage and family therapist, clinical supervisor, and certified family life educator with 10 years of experience. Her integrative approach addresses mental health from a systemic perspective, tailored to each client's unique needs.\n\nAshlyn specializes in Family Systems Theory, parent-child relationships, child development, trauma, and foster care. She holds degrees from Miami University and Northwestern University and is a doctoral candidate at Antioch University, researching parental incarceration's impact on families.",
+          "quote": "You may not be responsible for the wound but you are responsible for your healing.",
+          "quoteAuthor": "Unknown"
+        },
+        {
+          "name": "Emily Arseneau, LMFTA",
+          "title": "Marriage and Family Associate",
+          "image": "/images/staff/Emily 2025.jpg",
+          "bio": "Emily holds a Master's in Marriage and Family Therapy and is working toward licensure. She began as a social worker in 2017 and has provided therapy since 2021.\n\nEmily helps adolescents, children, and their families with emotional regulation, anxiety, depression, body image, self-esteem, and communication. Her therapeutic style is nonjudgmental and compassionate while asking tough questions necessary for growth.\n\nEmily and the Reach For Youth team invite clients into mutually respectful relationships, where clinician and client collaborate for care and growth.",
+          "quote": "The good life is a process, not a state of being. It is a direction, not a destination.",
+          "quoteAuthor": "Carl Rogers"
+        },
+        {
+          "name": "Dawn Jones, LMFTA",
+          "title": "Marriage and Family Associate",
+          "image": "/images/staff/Dawn Jones.jpg",
+          "bio": "Dawn holds a Bachelor's in Biblical Studies from Indiana Wesleyan University and Master's degrees in Marriage and Family Therapy and Divinity from Christian Theological Seminary. She served as a Youth Leader for 10 years.\n\nDawn joined Reach For Youth as an intern in 2022 and became full-time in 2024. She specializes in working with youth and families on parenting issues. As a certified Nurturing Parenting Educator, published author, and speaker, she creates therapeutic spaces where families connect, learn, and grow together while working toward licensure.",
+          "quote": "I am no longer accepting the things I cannot change. I am changing the things I cannot accept.",
+          "quoteAuthor": "Angela Davis"
+        },
+        {
+          "name": "Dan Arseneau, LMFTA",
+          "title": "Marriage and Family Associate",
+          "image": "/images/staff/Dan 2025.jpg",
+          "bio": "Dan holds a Bachelor's in Youth Ministry from Lincoln Christian University and a Master's in Marriage and Family Therapy from Christian Theological Seminary. He served as a youth pastor for 9 years before joining Reach For Youth in 2021.\n\nDan delivers Empower Youth curriculum to community partners in Marion and Johnson Counties and provides mental health therapy services. He works with children and parents on behavior and communication issues with a nonjudgmental focus on strengthening family relationships.",
+          "quote": "We keep moving forward, opening up new doors and doing new things, because we're curious ... and curiosity keeps leading us down new paths.",
+          "quoteAuthor": "Walt Disney"
+        }
+      ]
     },
     {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
-    },
-    {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
-    },
-    {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
-    },
-    {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
+      "name": "Restorative Justice Team",
+      "members": [
+        {
+          "name": "Stephen McClain",
+          "title": "Director of Outreach- Eastern Region",
+          "image": "/images/staff/Sephen McClain 25.png",
+          "bio": "Stephen believes every kid has the potential to become a success story. With 12 years of experience as a family/community liaison in public schools, he has helped hundreds of students boost confidence, develop skills, and become productive adults.\n\nIn 2022, Stephen joined Reach For Youth as Outreach Program Director, creating opportunities and programs for individuals who lack the means and connections. When not working in the community, he coaches high school football and spends time with family and friends, believing sports have healing power in his life.",
+          "quote": "Work with Each Child, Support them Each Day and Watch the Success.",
+          "quoteAuthor": ""
+        },
+        {
+          "name": "Caroline Mouser, MSW",
+          "title": "Director of Outreach- South Region",
+          "image": "/images/staff/Caroline Mouser.jpg",
+          "bio": "Caroline joined Reach For Youth in 2023 as Administrative Coordinator and became Director of Outreach-South Region in 2024, connecting Johnson County to the organization's programs.\n\nShe earned her Bachelor's in Social Work from Indiana Wesleyan University in 2021 and Master's in 2024. Caroline has worked with youth since 2019 in shelters for families experiencing homelessness, after-school programs, and as a summer camp director. She is passionate about building relationships and providing tools for youth success. In her free time, she enjoys walking with her dog, baking, and coffee with friends.",
+          "quote": "Alone, we can do so little; together, we can do so much.",
+          "quoteAuthor": "Helen Keller"
+        },
+        {
+          "name": "Charlotte Taylor, LMHC",
+          "title": "Director of Outreach- Central Region",
+          "image": "/images/staff/Charlotte.jpg",
+          "bio": "Charlotte became Director of Outreach-Central Region in 2025, bringing over 20 years of experience in Criminal Justice, Social Services, and Mental Health. She recently worked as a School Based Therapist in Warren Township and with families involved with Child Services.\n\nCharlotte holds a BS in Criminology from Indiana State University and MS in Psychology from Martin University, with LMHCA and NCC credentials. She is passionate about supporting youth through relationship building and community advocacy.",
+          "quote": "Do what you believe is great work...love what you do.",
+          "quoteAuthor": "Steve Jobs"
+        }
+      ]
     }
   ]
 }

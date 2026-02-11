@@ -1,34 +1,41 @@
 {
-  "items": [
+  "officers": [
     {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
+      "name": "Ninjia Miles",
+      "role": "Chairperson"
     },
     {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
+      "name": "Paige Codalata",
+      "role": "Vice Chairperson"
     },
     {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
+      "name": "Jeff Good",
+      "role": "Treasurer"
     },
     {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
+      "name": "Ryan McGinnis",
+      "role": "Secretary"
     },
     {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
-    },
-    {
-      "name": "Name Coming Soon",
-      "title": "Title Coming Soon",
-      "image": ""
+      "name": "Amber Welsh",
+      "role": ""
     }
+  ],
+  "members": [
+    "Stacey Alexander",
+    "Matt Barr",
+    "Kelsi Coe",
+    "Aaron McBride",
+    "Jonathan Cisneros",
+    "Nathan Flynn",
+    "Shelly Fitzgerald",
+    "Connie Polston",
+    "Tim Krull",
+    "Victor Wieczorek",
+    "Stacye Davis",
+    "LaWanda Girton",
+    "Amy Schmitz",
+    "Fatima Johnson",
+    "Juli Knutson"
   ]
 }

@@ -2006,6 +2006,239 @@
   }
 
   /* ============================================
+     ABOUT PAGE - Two Column Layouts
+     ============================================ */
+  .about-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .about-two-col--reverse {
+    direction: rtl;
+  }
+
+  .about-two-col--reverse > * {
+    direction: ltr;
+  }
+
+  .about-two-col__text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+  }
+
+  .about-photo {
+    width: 100%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+  }
+
+  @media (max-width: 768px) {
+    .about-two-col {
+      grid-template-columns: 1fr;
+    }
+    .about-two-col--reverse {
+      direction: ltr;
+    }
+  }
+
+  /* What We Believe - Orange Section */
+  .about-believe {
+    background: var(--color-accent-dark);
+    color: #fff;
+  }
+
+  .about-believe .about-two-col__text p,
+  .about-believe .about-two-col__text strong {
+    color: #fff;
+  }
+
+  .about-believe__list {
+    list-style: disc;
+    padding-left: var(--space-xl);
+    margin: var(--space-md) 0;
+  }
+
+  .about-believe__list li {
+    color: #fff;
+    margin-bottom: var(--space-sm);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  /* Our Impact List */
+  .about-impact__list {
+    list-style: disc;
+    padding-left: var(--space-xl);
+  }
+
+  .about-impact__list li {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  /* ============================================
+     ABOUT PAGE - Department & Staff Bio Cards
+     ============================================ */
+  .about-department {
+    padding-bottom: var(--space-xl);
+  }
+
+  .department-banner {
+    background: var(--color-accent);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-2xl);
+    text-align: center;
+  }
+
+  .department-banner__title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .staff-bio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .staff-bio-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .staff-bio-card__photo-wrap {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: var(--space-md);
+    border: 4px solid var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .staff-bio-card__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .staff-bio-card__avatar {
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg-cool);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .staff-bio-card__avatar svg {
+    width: 60px;
+    height: 60px;
+    fill: var(--color-text-muted);
+  }
+
+  .staff-bio-card__name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .staff-bio-card__title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+  }
+
+  .staff-bio-card__bio {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    text-align: left;
+  }
+
+  .staff-bio-card__bio p {
+    margin-bottom: var(--space-sm);
+  }
+
+  .staff-bio-card__quote {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background: var(--color-bg-cool);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-accent);
+    width: 100%;
+    text-align: left;
+  }
+
+  .staff-bio-card__quote p {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .staff-bio-card__quote cite {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-xs);
+    font-style: normal;
+  }
+
+  /* ============================================
+     ABOUT PAGE - Board Tags
+     ============================================ */
+  .board-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+  }
+
+  .board-tag {
+    background: var(--color-accent-dark);
+    color: #fff;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+    text-align: center;
+    min-width: 150px;
+  }
+
+  .board-tag--officer {
+    background: var(--color-accent-dark);
+  }
+
+  .board-tag__name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: block;
+  }
+
+  .board-tag__role {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    display: block;
+  }
+
+  /* ============================================
      PRINT STYLES
      ============================================ */
   @media print {
@@ -2028,4 +2261,3 @@
       color: var(--color-text);
     }
   }
-</style>
