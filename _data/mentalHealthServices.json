@@ -43,15 +43,6 @@
         "Mental health education",
         "Prevention programs"
       ]
-    },
-    {
-      "title": "CMS Test Service",
-      "icon": "icon-help",
-      "description": "Test entry for CMS verification",
-      "items": [
-        "Test item one",
-        "Test item two"
-      ]
     }
   ]
 }
