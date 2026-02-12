@@ -2105,8 +2105,9 @@
   }
 
   .staff-bio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var(--space-xl);
   }
 
@@ -2119,6 +2120,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 0 1 340px;
+    max-width: 380px;
   }
 
   .staff-bio-card__photo-wrap {
@@ -2135,6 +2138,27 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  /* Per-staff headshot position adjustments */
+  .staff-bio-card__photo[src*="Kendee"] {
+    object-position: center 40%;
+  }
+
+  .staff-bio-card__photo[src*="Mark Sattler"] {
+    object-position: 55% center;
+  }
+
+  .staff-bio-card__photo[src*="Emily"] {
+    object-position: center 40%;
+  }
+
+  .staff-bio-card__photo[src*="Ashlyn"] {
+    object-position: center 20%;
+  }
+
+  .staff-bio-card__photo[src*="Denise"] {
+    object-position: center 25%;
   }
 
   .staff-bio-card__avatar {
