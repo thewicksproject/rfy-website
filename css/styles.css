@@ -2032,7 +2032,7 @@
 
   .about-photo {
     width: 100%;
-    border-radius: var(--radius-md);
+    border-radius: 178px;
     box-shadow: var(--shadow-md);
   }
 
