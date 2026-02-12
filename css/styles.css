@@ -2032,6 +2032,8 @@
 
   .about-photo {
     width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 178px;
     box-shadow: var(--shadow-md);
   }
