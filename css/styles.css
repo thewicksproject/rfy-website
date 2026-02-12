@@ -2038,6 +2038,11 @@
     box-shadow: 0 4px 16px rgba(0,0,0,0.18);
   }
 
+  .about-photo[src*="what-we-believe"],
+  .about-photo[src*="our-impact"] {
+    transform: scale(1.08);
+  }
+
   @media (max-width: 768px) {
     .about-two-col {
       grid-template-columns: 1fr;
