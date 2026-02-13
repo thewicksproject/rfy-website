@@ -65,7 +65,7 @@ description: For over 50 years, Reach For Youth has been a trusted resource for 
         <h2 id="impact-title" class="section-title" style="text-align:left;">Our Impact</h2>
         <ul class="about-impact__list">
           {% for stat in aboutContent.ourImpact.stats %}
-          <li>{{ stat.label }}</li>
+          <li>{{ stat.number }} {{ stat.label }}</li>
           {% endfor %}
           <li>{{ aboutContent.ourImpact.narrative }}</li>
         </ul>
