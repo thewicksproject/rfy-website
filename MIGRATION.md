@@ -92,13 +92,22 @@ If something goes wrong:
 2. **OAuth:** Revert URLs to `rfy.thewicksproject.org`
 3. **CMS config:** Revert `base_url` to staging domain
 
+### Step 7: Remove Search Engine Block
+
+The staging site includes a robots meta tag that prevents search engines from indexing:
+```html
+<meta name="robots" content="noindex, nofollow">
+```
+
+This tag should already be removed in the latest codebase. Verify it is not present in `_includes/base.njk`. If it is still there, delete the line so that Google and other search engines can index the production site.
+
 ## Post-Migration
 
 - [ ] Verify all pages load correctly
 - [ ] Test donation link (Bloomerang)
-- [ ] Test contact form
 - [ ] Update any external links pointing to old staging URL
 - [ ] Consider setting up redirect from staging → production
+- [ ] Verify robots noindex tag is removed (view page source, search for "noindex")
 
 ## Notes
 

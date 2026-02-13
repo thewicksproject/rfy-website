@@ -100,7 +100,6 @@ export async function onRequestGet(context) {
     });
 
   } catch (error) {
-    console.error(error);
     return new Response(error.message, {
       headers: { 'content-type': 'text/html;charset=UTF-8' },
       status: 500,

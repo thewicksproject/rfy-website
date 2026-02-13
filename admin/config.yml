@@ -175,6 +175,54 @@ collections:
   - name: "about"
     label: "About Page"
     files:
+      - name: "aboutContent"
+        label: "About Page Content"
+        file: "_data/aboutContent.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Who We Are"
+            name: "whoWeAre"
+            widget: "object"
+            fields:
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+          - label: "What We Believe"
+            name: "whatWeBelieve"
+            widget: "object"
+            fields:
+              - { label: "Intro Text", name: "intro", widget: "string" }
+              - label: "Mission Points"
+                name: "points"
+                widget: "list"
+                field: { label: "Point", name: "point", widget: "string" }
+              - { label: "Closing Text", name: "closing", widget: "text" }
+          - label: "Our Impact"
+            name: "ourImpact"
+            widget: "object"
+            fields:
+              - label: "Statistics"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Number", name: "number", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+              - { label: "Narrative Text", name: "narrative", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+          - label: "Team Intro"
+            name: "teamIntro"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Introduction Text", name: "text", widget: "text" }
+
       - name: "timeline"
         label: "History Timeline"
         file: "_data/timeline.json"

@@ -4,8 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ description or site.description }}">
-  <meta name="robots" content="noindex, nofollow">
   <title>{{ title }} | {{ site.name }}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }} | {{ site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:image" content="/images/logo.png">
+  <meta name="twitter:card" content="summary">
 
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +22,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NonprofitOrganization",
+    "name": "{{ site.name }}",
+    "description": "{{ site.description }}",
+    "url": "https://reachforyouth.org",
+    "logo": "https://reachforyouth.org/images/logo.png",
+    "telephone": "{{ site.phone.main }}",
+    "email": "{{ site.email }}",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.offices.central.address }}",
+        "addressLocality": "{{ site.offices.central.city }}",
+        "addressRegion": "{{ site.offices.central.state }}",
+        "postalCode": "{{ site.offices.central.zip }}",
+        "addressCountry": "US"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.offices.southside.address }}",
+        "addressLocality": "{{ site.offices.southside.city }}",
+        "addressRegion": "{{ site.offices.southside.state }}",
+        "postalCode": "{{ site.offices.southside.zip }}",
+        "addressCountry": "US"
+      }
+    ],
+    "sameAs": [
+      "{{ site.social.facebook }}",
+      "{{ site.social.instagram }}",
+      "{{ site.social.linkedin }}",
+      "{{ site.social.youtube }}",
+      "{{ site.social.twitter }}"
+    ]
+  }
+  </script>
 </head>
 <body>
   {% include "icons.njk" %}

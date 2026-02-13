@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "About Us",
+    "subtitle": "Supporting Resilient Youth. Empowering Families. Strengthening Communities."
+  },
+  "whoWeAre": {
+    "paragraphs": [
+      "Growing up isn't easy -- and no one should face it alone. At Reach For Youth, we walk alongside youth and families during their most vulnerable moments, offering not just services, but a second chance. Whether it's a teenager navigating big emotions, a parent unsure where to turn, or a teacher seeking support for a student, we are here with solutions rooted in care and compassion.",
+      "For over 50 years, Reach For Youth has been a trusted nonprofit resource across Central Indiana. Through mental health counseling, restorative justice, and prevention programs, we help youth and families overcome challenges, rediscover hope, and write a new story for their lives.",
+      "We don't just believe in youth -- we invest in them. We empower families. And we create space for communities to grow stronger together."
+    ],
+    "image": ""
+  },
+  "whatWeBelieve": {
+    "intro": "As a Youth Service Bureau, our core mission is to:",
+    "points": [
+      "Support, represent, and protect the rights of young people.",
+      "Prevent juvenile delinquency and repeat offenses.",
+      "Maintain a strong referral network so families access the right resources at the right time.",
+      "Educate our community on the issues facing youth today -- and how to be part of the solution."
+    ],
+    "closing": "From first-time offenders finding a path forward through Teen Court to families receiving crucial mental health counseling, Reach For Youth is where change begins."
+  },
+  "ourImpact": {
+    "stats": [
+      { "number": "2,000+", "label": "Lives touched annually" },
+      { "number": "$300K+", "label": "In no-cost services for families in need" },
+      { "number": "97%", "label": "Of youth successfully complete Teen Court" },
+      { "number": "100%", "label": "Report greater confidence to make positive choices" }
+    ],
+    "narrative": "We don't just measure success in statistics -- we measure it in stories. In restored relationships. In futures regained.",
+    "image": ""
+  },
+  "teamIntro": {
+    "title": "Our Team",
+    "text": "Behind every changed life is a committed team of professionals. Our passionate and diverse staff brings together decades of experience in mental health, youth justice, nonprofit leadership, and community outreach. Together, we deliver high-impact programs that meet families where they are -- and move them forward."
+  }
+}

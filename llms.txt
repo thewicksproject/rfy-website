@@ -1,0 +1,21 @@
+# Reach For Youth
+
+> Reach For Youth is a nonprofit organization serving Central Indiana for over 50 years, providing mental health counseling, restorative justice programs, and prevention education for youth and families.
+
+## About
+
+- [About Us](https://reachforyouth.org/about/): Our mission, history, team, and impact
+- [Services Overview](https://reachforyouth.org/services/): Mental health and restorative justice programs
+- [Mental Health Services](https://reachforyouth.org/services/mental-health/): Counseling for youth and families
+- [Restorative Justice](https://reachforyouth.org/services/restorative-justice/): Teen Court and diversion programs
+
+## Get Involved
+
+- [Volunteer](https://reachforyouth.org/volunteer/): Volunteer opportunities and sign-up
+- [Donate](https://reachforyouth.org/donate/): Support our mission financially
+- [Events](https://reachforyouth.org/events/): Upcoming fundraisers and community events
+- [Contact](https://reachforyouth.org/contact/): Phone, email, and office locations
+
+## Resources
+
+- [Success Stories](https://reachforyouth.org/success-stories/): Stories of youth and families we have served

@@ -8,9 +8,9 @@ description: For over 50 years, Reach For Youth has been a trusted resource for 
 <section class="hero hero--inner" aria-labelledby="hero-title">
   <div class="container">
     <div class="hero__content">
-      <h1 id="hero-title" class="hero__title">About Us</h1>
+      <h1 id="hero-title" class="hero__title">{{ aboutContent.hero.title }}</h1>
       <p class="hero__subtitle">
-        Supporting Resilient Youth. Empowering Families. Strengthening Communities.
+        {{ aboutContent.hero.subtitle }}
       </p>
     </div>
   </div>
@@ -21,13 +21,13 @@ description: For over 50 years, Reach For Youth has been a trusted resource for 
   <div class="container">
     <div class="about-two-col">
       <div class="about-two-col__image">
-        <img src="/images/staff/2025 Summer Group.jpg" alt="Reach For Youth team group photo" class="about-photo">
+        <img src="{{ aboutContent.whoWeAre.image or '/images/staff/2025 Summer Group.jpg' }}" alt="Reach For Youth team group photo" class="about-photo">
       </div>
       <div class="about-two-col__text">
         <h2 id="who-we-are-title" class="section-title" style="text-align:left;">Who We Are</h2>
-        <p>Growing up isn't easy—and no one should face it alone. At Reach For Youth, we walk alongside youth and families during their most vulnerable moments, offering not just services, but a second chance. Whether it's a teenager navigating big emotions, a parent unsure where to turn, or a teacher seeking support for a student, we are here with solutions rooted in care and compassion.</p>
-        <p>For over 50 years, Reach For Youth has been a trusted nonprofit resource across Central Indiana. Through mental health counseling, restorative justice, and prevention programs, we help youth and families overcome challenges, rediscover hope, and write a new story for their lives.</p>
-        <p>We don't just believe in youth—we invest in them. We empower families. And we create space for communities to grow stronger together.</p>
+        {% for paragraph in aboutContent.whoWeAre.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -39,14 +39,13 @@ description: For over 50 years, Reach For Youth has been a trusted resource for 
     <div class="about-two-col about-two-col--reverse">
       <div class="about-two-col__text">
         <h2 id="believe-title" class="section-title" style="text-align:left;color:#fff;">What We Believe</h2>
-        <p>As a <strong>Youth Service Bureau</strong>, our core mission is to:</p>
+        <p>{{ aboutContent.whatWeBelieve.intro }}</p>
         <ul class="about-believe__list">
-          <li>Support, represent, and protect the rights of young people.</li>
-          <li>Prevent juvenile delinquency and repeat offenses.</li>
-          <li>Maintain a strong referral network so families access the right resources at the right time.</li>
-          <li>Educate our community on the issues facing youth today—and how to be part of the solution.</li>
+          {% for point in aboutContent.whatWeBelieve.points %}
+          <li>{{ point }}</li>
+          {% endfor %}
         </ul>
-        <p>From first-time offenders finding a path forward through Teen Court to families receiving crucial mental health counseling, Reach For Youth is where change begins.</p>
+        <p>{{ aboutContent.whatWeBelieve.closing }}</p>
       </div>
       <div class="about-two-col__image">
         <img src="/images/staff/what-we-believe.jpg?v=2" alt="Reach For Youth staff members" class="about-photo">
@@ -60,16 +59,15 @@ description: For over 50 years, Reach For Youth has been a trusted resource for 
   <div class="container">
     <div class="about-two-col">
       <div class="about-two-col__image">
-        <img src="/images/staff/our-impact.jpg?v=2" alt="Reach For Youth youth group" class="about-photo">
+        <img src="{{ aboutContent.ourImpact.image or '/images/staff/our-impact.jpg?v=2' }}" alt="Reach For Youth youth group" class="about-photo">
       </div>
       <div class="about-two-col__text">
         <h2 id="impact-title" class="section-title" style="text-align:left;">Our Impact</h2>
         <ul class="about-impact__list">
-          <li>Over 2,000 lives touched annually</li>
-          <li>More than $300,000 in services provided at no cost to families in need</li>
-          <li>97% of youth successfully complete Teen Court requirements</li>
-          <li>100% report greater confidence to make positive choices</li>
-          <li>We don't just measure success in statistics—we measure it in stories. In restored relationships. In futures regained.</li>
+          {% for stat in aboutContent.ourImpact.stats %}
+          <li>{{ stat.label }}</li>
+          {% endfor %}
+          <li>{{ aboutContent.ourImpact.narrative }}</li>
         </ul>
       </div>
     </div>
@@ -79,9 +77,9 @@ description: For over 50 years, Reach For Youth has been a trusted resource for 
 <!-- OUR TEAM INTRO -->
 <section class="section" aria-labelledby="team-title">
   <div class="container">
-    <h2 id="team-title" class="section-title">Our Team</h2>
+    <h2 id="team-title" class="section-title">{{ aboutContent.teamIntro.title }}</h2>
     <p class="section-subtitle" style="max-width:900px;margin:0 auto;text-align:center;">
-      Behind every changed life is a committed team of professionals. Our passionate and diverse staff brings together decades of experience in mental health, youth justice, nonprofit leadership, and community outreach. Together, we deliver high-impact programs that meet families where they are—and move them forward.
+      {{ aboutContent.teamIntro.text }}
     </p>
   </div>
 </section>
