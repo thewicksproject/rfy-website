@@ -2270,6 +2270,382 @@
   }
 
   /* ============================================
+     VOLUNTEER PAGE
+     ============================================ */
+  .opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  @media (max-width: 600px) {
+    .opportunities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .opportunity-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-normal);
+  }
+
+  .opportunity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary-light);
+  }
+
+  .opportunity-card__title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .opportunity-card__list {
+    list-style: none;
+  }
+
+  .opportunity-card__list li {
+    padding: var(--space-xs) 0;
+    padding-left: var(--space-lg);
+    position: relative;
+    color: var(--color-text-light);
+  }
+
+  .opportunity-card__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent-light);
+    border-radius: 50%;
+  }
+
+  .requirements-box {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+
+  .requirements-box h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .requirements-box ul {
+    list-style: none;
+    text-align: left;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .requirements-box li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
+    color: var(--color-text-light);
+  }
+
+  .requirements-box li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-light);
+    font-weight: 700;
+  }
+
+  .application-cta {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .application-cta__title {
+    color: white;
+    margin-bottom: var(--space-md);
+  }
+
+  .application-cta__text {
+    opacity: 0.9;
+    margin-bottom: var(--space-xl);
+    font-size: 1.125rem;
+  }
+
+  .contact-box {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+  }
+
+  .contact-box h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-box p {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-box a {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  /* ============================================
+     EVENTS PAGE - Featured Event
+     ============================================ */
+  .featured-event {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-3xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .featured-event__badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: white;
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-lg);
+  }
+
+  .featured-event__name {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xl);
+  }
+
+  .featured-event__meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
+    background: var(--color-bg-cool);
+    border-radius: var(--radius-md);
+  }
+
+  @media (max-width: 600px) {
+    .featured-event__meta {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .featured-event__meta-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+  }
+
+  .featured-event__meta-value {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .featured-event__description {
+    color: var(--color-text-light);
+    line-height: 1.8;
+  }
+
+  .featured-event__highlights h4 {
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+
+  .featured-event__highlights ul {
+    list-style: none;
+    margin-bottom: var(--space-xl);
+  }
+
+  .featured-event__highlights li {
+    padding: var(--space-xs) 0;
+    padding-left: var(--space-lg);
+    position: relative;
+    color: var(--color-text-light);
+  }
+
+  .featured-event__highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent-light);
+    border-radius: 50%;
+  }
+
+  .featured-event__ctas {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  /* ============================================
+     EVENTS PAGE - Sponsorship
+     ============================================ */
+  .sponsorship-levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .sponsorship-level {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-normal);
+  }
+
+  .sponsorship-level:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+  }
+
+  .sponsorship-level__name {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .sponsorship-level__amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  .sponsorship-contact {
+    text-align: center;
+    color: var(--color-text-light);
+  }
+
+  .sponsorship-contact a {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  /* ============================================
+     EVENTS PAGE - Support Cards
+     ============================================ */
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  @media (max-width: 900px) {
+    .support-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .support-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .support-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-normal);
+  }
+
+  .support-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .support-card__icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+  }
+
+  .support-card__icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--color-primary);
+  }
+
+  .support-card h4 {
+    font-family: var(--font-display);
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+  }
+
+  .support-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+  }
+
+  .past-events {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-text-light);
+    line-height: 1.8;
+  }
+
+  /* ============================================
      PRINT STYLES
      ============================================ */
   @media print {
