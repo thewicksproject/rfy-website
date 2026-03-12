@@ -2035,12 +2035,30 @@
     margin-bottom: var(--space-md);
   }
 
+  .about-two-col__image {
+    overflow: hidden;
+    border-radius: 178px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  }
+
   .about-photo {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: 178px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    display: block;
+  }
+
+  .about-who-we-are .about-photo {
+    aspect-ratio: 3 / 2;
+    object-position: center 65%;
+  }
+
+  .about-believe .about-two-col__image {
+    border-radius: 80px;
+  }
+
+  .about-believe .about-photo {
+    transform: translateY(60px);
   }
 
   @media (max-width: 768px) {
