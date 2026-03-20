@@ -95,9 +95,13 @@ collections:
         fields:
           - { label: "Show Event", name: "visible", widget: "boolean", default: true }
           - { label: "Event Name", name: "name", widget: "string" }
-          - { label: "Date", name: "date", widget: "string", hint: "e.g., Spring 2026" }
+          - { label: "Date", name: "date", widget: "string", hint: "e.g., Tuesday, October 27, 2026" }
+          - { label: "Time", name: "time", widget: "string", required: false, hint: "e.g., 8:00 AM" }
           - { label: "Location", name: "location", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
+          - { label: "Registration URL", name: "registrationUrl", widget: "string", required: false, hint: "RSVP / Google Form link" }
+          - { label: "Sponsorship Packet URL", name: "sponsorshipPacketUrl", widget: "string", required: false, hint: "Path to PDF, e.g., /assets/docs/2026-sponsorship-packet.pdf" }
+          - { label: "Donation URL", name: "donationUrl", widget: "string", required: false, hint: "Bloomerang hosted donation URL" }
 
   # =====================
   # STATISTICS
@@ -281,7 +285,9 @@ collections:
             widget: "list"
             fields:
               - { label: "Level Name", name: "name", widget: "string" }
-              - { label: "Amount", name: "amount", widget: "string", hint: "e.g., 10,000" }
+              - { label: "Amount", name: "amount", widget: "string", hint: "e.g., 7,500" }
+              - { label: "Tagline", name: "tagline", widget: "string", required: false, hint: "Short theme, e.g., Empowering Classrooms, Transforming Futures" }
+              - { label: "Impact Description", name: "impact", widget: "string", required: false, hint: "What this amount funds, e.g., Supports a classroom of students..." }
 
   # =====================
   # DONATE PAGE

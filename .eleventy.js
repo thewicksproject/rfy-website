@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   // Pass through static assets
+  eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("admin");

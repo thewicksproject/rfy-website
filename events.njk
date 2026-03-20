@@ -32,7 +32,7 @@ description: Join us at our upcoming events and be part of the Reach For Youth c
         </div>
         <div class="featured-event__meta-item">
           <span class="featured-event__meta-label">Time</span>
-          <span class="featured-event__meta-value">Morning Event</span>
+          <span class="featured-event__meta-value">{{ event.time if event.time else "Morning Event" }}</span>
         </div>
         <div class="featured-event__meta-item">
           <span class="featured-event__meta-label">Location</span>
@@ -40,7 +40,7 @@ description: Join us at our upcoming events and be part of the Reach For Youth c
         </div>
         <div class="featured-event__meta-item">
           <span class="featured-event__meta-label">Status</span>
-          <span class="featured-event__meta-value">Save the Date!</span>
+          <span class="featured-event__meta-value">{{ "Registration Open" if event.registrationUrl else "Save the Date!" }}</span>
         </div>
       </div>
 
@@ -61,27 +61,84 @@ description: Join us at our upcoming events and be part of the Reach For Youth c
       </div>
 
       <div class="featured-event__ctas">
-        <a href="mailto:{{ site.email }}?subject=Rise%20%26%20Shine%202026%20Interest" class="btn btn--primary">Get Notified</a>
-        <a href="mailto:{{ site.email }}?subject=Rise%20%26%20Shine%202026%20Sponsorship%20Inquiry" class="btn btn--secondary">Sponsorship Interest</a>
+        {% if event.registrationUrl %}
+        <a href="{{ event.registrationUrl }}" class="btn btn--primary" target="_blank" rel="noopener">RSVP</a>
+        {% endif %}
+        {% if event.donationUrl %}
+        <a href="{{ event.donationUrl }}" class="btn btn--primary" target="_blank" rel="noopener">Become a Sponsor</a>
+        {% endif %}
+        {% if event.sponsorshipPacketUrl %}
+        <a href="{{ event.sponsorshipPacketUrl }}" class="btn btn--secondary" target="_blank" rel="noopener">Sponsorship Packet</a>
+        {% endif %}
       </div>
     </div>
   </div>
 </section>
 {% endif %}
 
+<!-- PROGRAM IMPACT -->
+<section class="section section--warm" aria-labelledby="impact-title">
+  <div class="container">
+    <h2 id="impact-title" class="section-title">Program <span>Impact</span></h2>
+    <p class="section-subtitle">
+      For over 50 years, Reach For Youth has delivered essential mental health counseling and youth development services that empower young people and their families.
+    </p>
+
+    <div class="impact-stats-grid">
+      <div class="impact-stat-card">
+        <span class="impact-stat-card__number">2,268</span>
+        <span class="impact-stat-card__label">Lives Touched in 2025</span>
+      </div>
+      <div class="impact-stat-card">
+        <span class="impact-stat-card__number">$238K</span>
+        <span class="impact-stat-card__label">Distributed for Counseling Services</span>
+      </div>
+      <div class="impact-stat-card">
+        <span class="impact-stat-card__number">95%</span>
+        <span class="impact-stat-card__label">Youth Completed Restorative Justice Requirements</span>
+      </div>
+      <div class="impact-stat-card">
+        <span class="impact-stat-card__number">1,758</span>
+        <span class="impact-stat-card__label">Families Impacted by Services</span>
+      </div>
+    </div>
+
+    <div class="impact-testimonials">
+      <div class="impact-testimonial">
+        <span class="impact-testimonial__stat">92%</span>
+        <p>of parents report their child has shown improved behavior at home or school</p>
+      </div>
+      <div class="impact-testimonial">
+        <span class="impact-testimonial__stat">100%</span>
+        <p>of parents report improved communication with their child and family</p>
+      </div>
+      <div class="impact-testimonial">
+        <span class="impact-testimonial__stat">100%</span>
+        <p>of youth feel confident they will not repeat a similar offense after restorative justice programming</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SPONSORSHIP OPPORTUNITIES -->
-<section class="section section--warm" aria-labelledby="sponsorship-title">
+<section class="section" aria-labelledby="sponsorship-title">
   <div class="container">
     <h2 id="sponsorship-title" class="section-title">Sponsorship <span>Opportunities</span></h2>
     <p class="section-subtitle">
-      Partner with us to make a lasting impact on Central Indiana youth.
+      Your sponsorship directly funds the programs that change young lives. See the real impact of each level.
     </p>
 
     <div class="sponsorship-levels">
       {% for level in sponsorshipLevels.items %}
       <div class="sponsorship-level">
-        <h3 class="sponsorship-level__name">{{ level.name }}</h3>
         <span class="sponsorship-level__amount">${{ level.amount }}</span>
+        <h3 class="sponsorship-level__name">{{ level.name }}</h3>
+        {% if level.tagline %}
+        <p class="sponsorship-level__tagline">{{ level.tagline }}</p>
+        {% endif %}
+        {% if level.impact %}
+        <p class="sponsorship-level__impact">{{ level.impact }}</p>
+        {% endif %}
       </div>
       {% endfor %}
     </div>
@@ -91,19 +148,16 @@ description: Join us at our upcoming events and be part of the Reach For Youth c
         For sponsorship inquiries, contact us at
         <a href="mailto:{{ site.email }}">{{ site.email }}</a>
       </p>
-    </div>
-  </div>
-</section>
-
-<!-- PAST EVENTS -->
-<section class="section" aria-labelledby="past-events-title">
-  <div class="container">
-    <h2 id="past-events-title" class="section-title">Past <span>Events</span></h2>
-
-    <div class="past-events">
-      <p>
-        Photos and recaps from past Rise & Shine events are available. Each year, we celebrate the incredible transformations happening in our community and the dedicated supporters who make it possible.
-      </p>
+      {% if event.sponsorshipPacketUrl or event.donationUrl %}
+      <div style="margin-top: var(--space-lg); display: flex; justify-content: center; flex-wrap: wrap; gap: var(--space-md);">
+        {% if event.sponsorshipPacketUrl %}
+        <a href="{{ event.sponsorshipPacketUrl }}" class="btn btn--secondary" target="_blank" rel="noopener">Download Sponsorship Packet</a>
+        {% endif %}
+        {% if event.donationUrl %}
+        <a href="{{ event.donationUrl }}" class="btn btn--primary" target="_blank" rel="noopener">Sponsor Online</a>
+        {% endif %}
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>
@@ -118,7 +172,9 @@ description: Join us at our upcoming events and be part of the Reach For Youth c
 
     <div class="support-grid">
       <div class="support-card">
-        <div class="support-card__icon" aria-hidden="true">✉️</div>
+        <div class="support-card__icon" aria-hidden="true">
+          <svg><use href="#icon-heart"/></svg>
+        </div>
         <h4>Newsletter Signup</h4>
         <p>Stay informed about upcoming events, program updates, and inspiring stories from the youth we serve.</p>
         <a href="mailto:{{ site.email }}?subject=Newsletter%20Signup" class="btn btn--secondary btn--small">Sign Up</a>
@@ -135,7 +191,7 @@ description: Join us at our upcoming events and be part of the Reach For Youth c
 
       <div class="support-card">
         <div class="support-card__icon" aria-hidden="true">
-          <svg><use href="#icon-heart"/></svg>
+          <svg><use href="#icon-book"/></svg>
         </div>
         <h4>Volunteer Opportunities</h4>
         <p>Make a direct impact by volunteering with our programs and supporting youth in your community.</p>
@@ -146,7 +202,7 @@ description: Join us at our upcoming events and be part of the Reach For Youth c
 </section>
 
 <!-- CTA: STAY CONNECTED -->
-<section class="section" aria-labelledby="cta-title">
+<section class="section section--warm" aria-labelledby="cta-title">
   <div class="container" style="text-align: center;">
     <h2 id="cta-title" class="section-title">Stay <span>Connected</span></h2>
     <p style="font-size: 1.25rem; line-height: 1.8; max-width: 700px; margin: 0 auto var(--space-2xl); color: var(--color-text-light);">

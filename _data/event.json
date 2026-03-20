@@ -1,8 +1,11 @@
 {
   "name": "Rise & Shine Breakfast 2026",
-  "date": "Fall 2026",
-  "location": "Location TBA",
+  "date": "Tuesday, October 27, 2026",
+  "time": "8:00 - 9:30 AM",
+  "location": "Biltwell Event Center",
   "description": "Save the date for our annual fundraiser breakfast celebrating the transformative power of youth services. Connect with community leaders, hear inspiring stories, and support the mission of Reach For Youth.",
-  "registrationUrl": "",
+  "registrationUrl": "https://forms.gle/xyo2DMAXv9ah7YyU7",
+  "sponsorshipPacketUrl": "/assets/docs/2026-sponsorship-packet.pdf",
+  "donationUrl": "https://crm.bloomerang.co/HostedDonation?ApiKey=pub_95975571-a514-11e5-9d49-0a1b37ae639f&WidgetId=7016448",
   "visible": true
 }
