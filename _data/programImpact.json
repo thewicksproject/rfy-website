@@ -1,0 +1,35 @@
+{
+  "description": "For over 50 years, Reach For Youth has delivered essential mental health counseling and youth development services that empower young people and their families.",
+  "stats": [
+    {
+      "number": "2,268",
+      "label": "Lives Touched in 2025"
+    },
+    {
+      "number": "$238K",
+      "label": "Distributed for Counseling Services"
+    },
+    {
+      "number": "95%",
+      "label": "Youth Completed Restorative Justice Requirements"
+    },
+    {
+      "number": "1,758",
+      "label": "Families Impacted by Services"
+    }
+  ],
+  "outcomes": [
+    {
+      "number": "92%",
+      "description": "of parents report their child has shown improved behavior at home or school"
+    },
+    {
+      "number": "100%",
+      "description": "of parents report improved communication with their child and family"
+    },
+    {
+      "number": "100%",
+      "description": "of youth feel confident they will not repeat a similar offense after restorative justice programming"
+    }
+  ]
+}

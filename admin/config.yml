@@ -276,6 +276,24 @@ collections:
   - name: "events"
     label: "Events Page"
     files:
+      - name: "programImpact"
+        label: "Program Impact"
+        file: "_data/programImpact.json"
+        fields:
+          - { label: "Description", name: "description", widget: "text", hint: "Intro paragraph for the Program Impact section" }
+          - label: "Impact Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string", hint: "e.g., 2,268 or $238K or 95%" }
+              - { label: "Label", name: "label", widget: "string", hint: "e.g., Lives Touched in 2025" }
+          - label: "Program Outcomes"
+            name: "outcomes"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string", hint: "e.g., 92%" }
+              - { label: "Description", name: "description", widget: "string", hint: "e.g., of parents report improved behavior" }
+
       - name: "sponsorship"
         label: "Sponsorship Levels"
         file: "_data/sponsorshipLevels.json"

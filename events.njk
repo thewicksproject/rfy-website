@@ -81,41 +81,25 @@ description: Join us at our upcoming events and be part of the Reach For Youth c
   <div class="container">
     <h2 id="impact-title" class="section-title">Program <span>Impact</span></h2>
     <p class="section-subtitle">
-      For over 50 years, Reach For Youth has delivered essential mental health counseling and youth development services that empower young people and their families.
+      {{ programImpact.description }}
     </p>
 
     <div class="impact-stats-grid">
+      {% for stat in programImpact.stats %}
       <div class="impact-stat-card">
-        <span class="impact-stat-card__number">2,268</span>
-        <span class="impact-stat-card__label">Lives Touched in 2025</span>
+        <span class="impact-stat-card__number">{{ stat.number }}</span>
+        <span class="impact-stat-card__label">{{ stat.label }}</span>
       </div>
-      <div class="impact-stat-card">
-        <span class="impact-stat-card__number">$238K</span>
-        <span class="impact-stat-card__label">Distributed for Counseling Services</span>
-      </div>
-      <div class="impact-stat-card">
-        <span class="impact-stat-card__number">95%</span>
-        <span class="impact-stat-card__label">Youth Completed Restorative Justice Requirements</span>
-      </div>
-      <div class="impact-stat-card">
-        <span class="impact-stat-card__number">1,758</span>
-        <span class="impact-stat-card__label">Families Impacted by Services</span>
-      </div>
+      {% endfor %}
     </div>
 
     <div class="impact-testimonials">
+      {% for outcome in programImpact.outcomes %}
       <div class="impact-testimonial">
-        <span class="impact-testimonial__stat">92%</span>
-        <p>of parents report their child has shown improved behavior at home or school</p>
+        <span class="impact-testimonial__stat">{{ outcome.number }}</span>
+        <p>{{ outcome.description }}</p>
       </div>
-      <div class="impact-testimonial">
-        <span class="impact-testimonial__stat">100%</span>
-        <p>of parents report improved communication with their child and family</p>
-      </div>
-      <div class="impact-testimonial">
-        <span class="impact-testimonial__stat">100%</span>
-        <p>of youth feel confident they will not repeat a similar offense after restorative justice programming</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
