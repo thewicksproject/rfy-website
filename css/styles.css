@@ -1888,7 +1888,7 @@
   .video-embed {
     border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.3);
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
