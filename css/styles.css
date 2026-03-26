@@ -1518,12 +1518,11 @@
 
   .footer__partner-logo {
     height: 70px;
-    width: auto;
-    max-width: 180px;
+    width: 150px;
     object-fit: contain;
     background: white;
     border-radius: 8px;
-    padding: 8px 12px;
+    padding: 10px 14px;
     opacity: 0.85;
     transition: opacity 0.3s ease;
   }
