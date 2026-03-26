@@ -1502,12 +1502,12 @@
   }
 
   .footer__partner-logo {
-    height: 45px;
-    width: 100px;
+    height: 35px;
+    width: 75px;
     object-fit: contain;
     background: white;
-    border-radius: 6px;
-    padding: 6px 8px;
+    border-radius: 5px;
+    padding: 4px 6px;
     opacity: 0.85;
     transition: opacity 0.3s ease;
   }
