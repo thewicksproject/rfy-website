@@ -736,6 +736,10 @@
     transition: all var(--transition-normal); /* Refined: smooth hover */
   }
 
+  .service-card__icon--orange {
+    background: linear-gradient(135deg, var(--color-accent-dark), #FF9A5C);
+  }
+
   .service-card:hover .service-card__icon {
     transform: scale(1.1); /* Refined: icon grows on hover */
     box-shadow: 0 4px 12px rgba(0, 39, 91, 0.3);
