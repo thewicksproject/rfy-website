@@ -1493,36 +1493,21 @@
     color: white;
   }
 
-  .footer__partners {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
-    text-align: center;
-  }
-
-  .footer__partners-title {
-    font-size: 0.875rem;
-    color: rgba(255,255,255,0.6);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--space-lg);
-  }
-
   .footer__partners-logos {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--space-2xl);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
   }
 
   .footer__partner-logo {
-    height: 70px;
-    width: 150px;
+    height: 45px;
+    width: 100px;
     object-fit: contain;
     background: white;
-    border-radius: 8px;
-    padding: 10px 14px;
+    border-radius: 6px;
+    padding: 6px 8px;
     opacity: 0.85;
     transition: opacity 0.3s ease;
   }
@@ -1672,11 +1657,7 @@
     }
 
     .footer__partners-logos {
-      gap: var(--space-lg);
-    }
-
-    .footer__partner-logo {
-      height: 45px;
+      justify-content: center;
     }
 
     .footer__bottom {
