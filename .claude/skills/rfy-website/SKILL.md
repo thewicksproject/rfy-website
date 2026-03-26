@@ -11,25 +11,43 @@ You manage the RFY website at https://rfy.thewicksproject.org
 ## Repository
 
 - **Repo:** https://github.com/thewicksproject/rfy-website
+- **Local path:** `C:/Users/mbaker/OneDrive - Reach For Youth, Inc/BOARD/Marketing Committee/New Website/rfy-website`
 - **Live site:** https://rfy.thewicksproject.org
 - **Stack:** Eleventy static site, hosted on Cloudflare Pages
 - **Auto-deploy:** Push to `main` triggers rebuild (about 30 seconds)
 
-## Before Making Changes
+## Git Workflow
 
-Always pull latest first:
+> **Important:** Bash on this machine completes silently. Always redirect output to a temp file and read it back.
 
-```bash
-cd ~/rfy-website
-git pull origin main
-```
-
-If the repo isn't cloned yet:
+### Pull latest before starting
 
 ```bash
-git clone https://github.com/thewicksproject/rfy-website ~/rfy-website
-cd ~/rfy-website
+git -C "C:/Users/mbaker/OneDrive - Reach For Youth, Inc/BOARD/Marketing Committee/New Website/rfy-website" pull origin main > C:/Users/mbaker/AppData/Local/Temp/gitpull.txt 2>&1
 ```
+Then read `C:/Users/mbaker/AppData/Local/Temp/gitpull.txt` to confirm success.
+
+### Commit and push after edits
+
+```bash
+git -C "C:/Users/mbaker/OneDrive - Reach For Youth, Inc/BOARD/Marketing Committee/New Website/rfy-website" add <file(s)> && \
+git -C "C:/Users/mbaker/OneDrive - Reach For Youth, Inc/BOARD/Marketing Committee/New Website/rfy-website" commit -m "Brief description" && \
+git -C "C:/Users/mbaker/OneDrive - Reach For Youth, Inc/BOARD/Marketing Committee/New Website/rfy-website" push origin main > C:/Users/mbaker/AppData/Local/Temp/gitpush.txt 2>&1
+```
+Then read `C:/Users/mbaker/AppData/Local/Temp/gitpush.txt` to confirm `main -> main`.
+
+### If push is rejected (remote has new commits)
+
+```bash
+git -C "C:/Users/mbaker/OneDrive - Reach For Youth, Inc/BOARD/Marketing Committee/New Website/rfy-website" stash && \
+git -C "C:/Users/mbaker/OneDrive - Reach For Youth, Inc/BOARD/Marketing Committee/New Website/rfy-website" pull --rebase origin main && \
+git -C "C:/Users/mbaker/OneDrive - Reach For Youth, Inc/BOARD/Marketing Committee/New Website/rfy-website" stash pop && \
+git -C "C:/Users/mbaker/OneDrive - Reach For Youth, Inc/BOARD/Marketing Committee/New Website/rfy-website" push origin main > C:/Users/mbaker/AppData/Local/Temp/gitpush.txt 2>&1
+```
+
+Always check for merge conflicts after stash pop. If conflicts exist, keep the upstream version (remote is authoritative).
+
+---
 
 ## Site Structure
 
@@ -73,7 +91,16 @@ Service subpages (`services/`):
 
 Main stylesheet: `css/styles.css`
 
-Brand colors are CSS custom properties near the top of the file.
+Brand colors (CSS custom properties at top of file):
+- `--color-primary: #00275B` — Navy (main brand)
+- `--color-primary-light: #57088B` — Purple (accent)
+- `--color-accent: #FF0778` — Pink (CTAs)
+- `--color-accent-light: #72F2CE` — Teal
+- `--color-accent-dark: #FF6D22` — Orange
+
+Service card icon color modifiers:
+- Default: navy→purple gradient
+- `.service-card__icon--orange`: orange gradient (currently used on restorative justice)
 
 ### Layouts and Components (`_includes/`)
 
@@ -84,33 +111,24 @@ Brand colors are CSS custom properties near the top of the file.
 | `icons.njk` | SVG icon definitions |
 | `translate-modal.njk` | Language translation modal |
 
+---
+
 ## Common Tasks
 
 ### Update contact info
 Edit `_data/site.json`. Phone numbers, email, addresses, and social links are all there.
 
-### Add or update staff/board members
-Edit `_data/staff.json` or `_data/board.json`. Each entry:
-
-```json
-{
-  "name": "Sarah Chen",
-  "title": "Director of Clinical Services",
-  "image": "/images/staff/sarah-chen.jpg"
-}
-```
-
-Images go in the `images/` folder.
-
 ### Update statistics
-Edit `_data/stats.json`. 
+Edit `_data/stats.json`.
 - `hero` array: homepage banner stats
 - `impact` array: other page sections
 - `volunteer` array: volunteer page stats
 
+### Add or update staff/board members
+Edit `_data/staff.json` or `_data/board.json`. Staff images go in `images/staff/`.
+
 ### Add a testimonial
 Edit `_data/testimonials.json`:
-
 ```json
 {
   "quote": "This program changed my life.",
@@ -125,7 +143,6 @@ Edit `css/styles.css`. Brand colors are CSS custom properties near the top.
 
 ### Create a new page
 1. Create a `.njk` file with frontmatter:
-
 ```
 ---
 layout: base.njk
@@ -134,20 +151,9 @@ title: Page Title
 
 Page content here...
 ```
+2. Add navigation link in `_includes/base.njk` if needed.
 
-2. Add navigation link in `_includes/base.njk` if needed
-
-## Pushing Changes
-
-After making edits:
-
-```bash
-git add .
-git commit -m "Brief description of changes"
-git push
-```
-
-The site rebuilds automatically. Changes are live in about 30 seconds.
+---
 
 ## Task
 
