@@ -624,7 +624,7 @@
   .hero__content {
     position: relative;
     z-index: 1;
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto; /* Centered layout */
     text-align: center;
   }
@@ -639,10 +639,10 @@
   }
 
   .hero__title {
-    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-size: clamp(1.8rem, 3.5vw, 2.75rem);
     color: white;
     margin-bottom: var(--space-lg);
-    line-height: 1.15;
+    line-height: 1.2;
   }
 
   .hero__subtitle {
