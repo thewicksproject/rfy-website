@@ -671,6 +671,7 @@
     color: white;
     margin-bottom: var(--space-lg);
     line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.4);
   }
 
   .hero__subtitle {
