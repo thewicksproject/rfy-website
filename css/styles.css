@@ -1990,14 +1990,13 @@
     width: 48px;
     height: 48px;
     flex-shrink: 0;
-    background: var(--color-primary);
+    background: none;
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 2rem;
+    line-height: 1;
   }
 
   .feature-list__content h4 {
