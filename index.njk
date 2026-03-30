@@ -6,17 +6,17 @@ description: Reach For Youth provides mental health counseling, restorative just
 
 <!-- SECTION 1: HERO -->
 <section class="hero hero--video" aria-labelledby="hero-title">
-  <video class="hero__video-bg" autoplay muted loop playsinline preload="auto" id="hero-video">
-    <source src="/images/hero-video.mp4" type="video/mp4">
-  </video>
+  <video class="hero__video-bg" muted loop playsinline id="hero-video"></video>
   <div class="hero__overlay"></div>
   <script>
     (function() {
       var v = document.getElementById('hero-video');
-      if (v) {
-        v.play().catch(function() {});
-        v.addEventListener('canplaythrough', function() { v.play().catch(function() {}); });
-      }
+      fetch('/images/hero-video.mp4')
+        .then(function(r) { return r.blob(); })
+        .then(function(blob) {
+          v.src = URL.createObjectURL(blob);
+          v.play().catch(function() {});
+        });
     })();
   </script>
   <div class="container">
