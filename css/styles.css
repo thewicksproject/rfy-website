@@ -1438,14 +1438,14 @@
   .footer {
     background: var(--color-text);
     color: white;
-    padding: var(--space-4xl) 0 var(--space-2xl);
+    padding: var(--space-2xl) 0 var(--space-lg);
   }
 
   .footer__grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: var(--space-3xl);
-    margin-bottom: var(--space-3xl);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
   }
 
   .footer__brand {
@@ -1464,9 +1464,9 @@
 
   .footer__description {
     color: rgba(255,255,255,0.7);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
     font-size: 0.875rem;
-    line-height: 1.7;
+    line-height: 1.6;
   }
 
   .footer__social {
@@ -1501,7 +1501,7 @@
   .footer__column h4 {
     color: white;
     font-size: 1rem;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-sm);
   }
 
   .footer__links {
@@ -1509,7 +1509,7 @@
   }
 
   .footer__links li {
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
   }
 
   .footer__links a {
@@ -1526,8 +1526,8 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--space-md);
-    margin-top: var(--space-lg);
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
   }
 
   .footer__partner-logo {
@@ -1547,7 +1547,7 @@
 
   .footer__bottom {
     border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: var(--space-2xl);
+    padding-top: var(--space-md);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2004,8 +2004,8 @@
   .footer__disclaimer {
     background: rgba(255,255,255,0.05);
     border-radius: var(--radius-md);
-    padding: var(--space-xl);
-    margin-bottom: var(--space-3xl);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
   }
 
   .footer__disclaimer-title {
