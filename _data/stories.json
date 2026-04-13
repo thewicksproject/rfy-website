@@ -12,12 +12,13 @@
     },
     {
       "name": "Courtney",
-      "program": "Teen Court",
+      "program": "The Circle",
       "tagColor": "green",
       "outcome": "Referred to Law School Bound",
       "quote": "Teen Court taught me to advocate for others—now I'm becoming a lawyer.",
       "image": "/images/story-courtney-teen-court.jpg",
-      "flipImage": false
+      "flipImage": false,
+      "slug": "courtney"
     },
     {
       "name": "Carly",
@@ -26,16 +27,18 @@
       "outcome": "Struggling to Thriving",
       "quote": "I learned that asking for help is the bravest thing you can do.",
       "image": "/images/story-carly-future-track.jpg",
-      "flipImage": false
+      "flipImage": false,
+      "slug": "carly"
     },
     {
       "name": "Marcus",
-      "program": "Teen Court",
+      "program": "The Circle",
       "tagColor": "green",
       "outcome": "First Offense to Mentor",
       "quote": "I mentor young people because someone believed in me first.",
       "image": "/images/story-marcus-teen-court.jpg",
-      "flipImage": false
+      "flipImage": false,
+      "slug": "marcus"
     },
     {
       "name": "Frank",
@@ -44,7 +47,8 @@
       "outcome": "Disconnected to United",
       "quote": "Family therapy helped us find our way back to each other.",
       "image": "/images/story-frank-family-counseling.jpg",
-      "flipImage": false
+      "flipImage": false,
+      "slug": "frank"
     },
     {
       "name": "Mark",
@@ -53,7 +57,8 @@
       "outcome": "At Risk to On Track",
       "quote": "The ATE program gave me the skills to make better choices.",
       "image": "/images/story-mark-ate-program.jpg",
-      "flipImage": false
+      "flipImage": false,
+      "slug": "mark"
     }
   ]
 }
