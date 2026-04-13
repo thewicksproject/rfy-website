@@ -17,10 +17,13 @@ description: Get in touch with Reach For Youth for services, volunteer opportuni
 <style>
   .contact-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--space-lg);
-    max-width: 1000px;
+    max-width: 700px;
     margin: 0 auto;
+  }
+  @media (min-width: 640px) {
+    .contact-cards { grid-template-columns: repeat(2, 1fr); }
   }
   .contact-card {
     background: white;
