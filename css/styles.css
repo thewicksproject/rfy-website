@@ -1961,36 +1961,31 @@
   }
 
   .feature-list__icon {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-    border-radius: var(--radius-md);
+    background: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 39, 91, 0.15);
+    color: var(--color-primary);
   }
 
   .feature-list__icon svg {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
   }
 
   .feature-list__icon--pink {
-    background: linear-gradient(135deg, var(--color-accent), var(--color-primary-light));
-    box-shadow: 0 4px 12px rgba(255, 7, 120, 0.2);
+    color: var(--color-accent);
   }
 
   .feature-list__icon--teal {
-    background: linear-gradient(135deg, var(--color-accent-light), var(--color-primary));
-    box-shadow: 0 4px 12px rgba(114, 242, 206, 0.3);
+    color: #2BB89A;
   }
 
   .feature-list__icon--orange {
-    background: linear-gradient(135deg, var(--color-accent-dark), var(--color-accent));
-    box-shadow: 0 4px 12px rgba(255, 109, 34, 0.2);
+    color: var(--color-accent-dark);
   }
 
   .feature-list__content h4 {
