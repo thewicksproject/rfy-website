@@ -1327,6 +1327,56 @@
      RESTORATIVE JUSTICE PAGE
      ============================================ */
 
+  /* Intro image with offset color pop */
+  .rj-intro-image {
+    position: relative;
+    display: block;
+    isolation: isolate;
+  }
+
+  .rj-intro-image::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: -18px;
+    bottom: -18px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary-light));
+    border-radius: var(--radius-lg);
+    z-index: -1;
+    transition: all var(--transition-normal);
+  }
+
+  .rj-intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 50px rgba(0, 39, 91, 0.25);
+    transition: transform var(--transition-normal);
+  }
+
+  .rj-intro-image:hover img {
+    transform: translate(-4px, -4px);
+  }
+
+  .rj-intro-image:hover::before {
+    top: 24px;
+    left: 24px;
+    right: -24px;
+    bottom: -24px;
+  }
+
+  @media (max-width: 768px) {
+    .rj-intro-image::before {
+      top: 10px;
+      left: 10px;
+      right: -10px;
+      bottom: -10px;
+    }
+  }
+
+
   /* Punitive vs Restorative — colored panels */
   .compare-grid {
     display: grid;
