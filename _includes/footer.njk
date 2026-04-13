@@ -13,9 +13,6 @@
 
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="/" class="footer__logo">
-          <img src="/images/logo.png" alt="{{ site.name }}" class="logo__img">
-        </a>
         <p class="footer__description">
           Reach For Youth is a Youth Service Bureau committed to supporting,
           representing, and protecting the rights of young people in Central Indiana.
@@ -76,11 +73,11 @@
           <li>{{ site.offices.central.address }}</li>
           <li>{{ site.offices.central.city }}, {{ site.offices.central.state }} {{ site.offices.central.zip }}</li>
           <li><a href="tel:{{ site.offices.central.phone | replace('-', '') }}">{{ site.offices.central.phone }}</a></li>
-          <li style="margin-top: var(--space-md);"><strong>{{ site.offices.southside.name }}</strong></li>
+          <li style="margin-top: var(--space-xs);"><strong>{{ site.offices.southside.name }}</strong></li>
           <li>{{ site.offices.southside.address }}</li>
           <li>{{ site.offices.southside.city }}, {{ site.offices.southside.state }} {{ site.offices.southside.zip }}</li>
           <li><a href="tel:{{ site.offices.southside.phone | replace('-', '') }}">{{ site.offices.southside.phone }}</a></li>
-          <li style="margin-top: var(--space-md);"><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li style="margin-top: var(--space-xs);"><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
     </div>
