@@ -1961,16 +1961,36 @@
   }
 
   .feature-list__icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     flex-shrink: 0;
-    background: none;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    line-height: 1;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 39, 91, 0.15);
+  }
+
+  .feature-list__icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .feature-list__icon--pink {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary-light));
+    box-shadow: 0 4px 12px rgba(255, 7, 120, 0.2);
+  }
+
+  .feature-list__icon--teal {
+    background: linear-gradient(135deg, var(--color-accent-light), var(--color-primary));
+    box-shadow: 0 4px 12px rgba(114, 242, 206, 0.3);
+  }
+
+  .feature-list__icon--orange {
+    background: linear-gradient(135deg, var(--color-accent-dark), var(--color-accent));
+    box-shadow: 0 4px 12px rgba(255, 109, 34, 0.2);
   }
 
   .feature-list__content h4 {
