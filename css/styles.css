@@ -1587,15 +1587,51 @@
     }
   }
 
+  /* Per-card color variables consumed by tags */
+  .rj-program-card {
+    --tag-color-start: var(--color-primary);
+    --tag-color-end: var(--color-primary-light);
+    --tag-tint: rgba(0, 39, 91, 0.05);
+    --tag-hover-tint: rgba(0, 39, 91, 0.1);
+  }
+
+  .rj-program-card--navy {
+    --tag-color-start: var(--color-primary);
+    --tag-color-end: #1b4a9a;
+    --tag-tint: rgba(0, 39, 91, 0.06);
+    --tag-hover-tint: rgba(0, 39, 91, 0.12);
+  }
+
+  .rj-program-card--purple {
+    --tag-color-start: var(--color-primary-light);
+    --tag-color-end: #8c39c5;
+    --tag-tint: rgba(87, 8, 139, 0.06);
+    --tag-hover-tint: rgba(87, 8, 139, 0.12);
+  }
+
+  .rj-program-card--pink {
+    --tag-color-start: var(--color-accent);
+    --tag-color-end: #ff4d9a;
+    --tag-tint: rgba(255, 7, 120, 0.06);
+    --tag-hover-tint: rgba(255, 7, 120, 0.12);
+  }
+
+  .rj-program-card--orange {
+    --tag-color-start: var(--color-accent-dark);
+    --tag-color-end: #ff9445;
+    --tag-tint: rgba(255, 109, 34, 0.06);
+    --tag-hover-tint: rgba(255, 109, 34, 0.14);
+  }
+
   .rj-program-card__tags li {
     position: relative;
     display: flex;
     align-items: flex-start;
     gap: var(--space-sm);
     padding: var(--space-sm) var(--space-sm) var(--space-sm) 36px;
-    background: linear-gradient(135deg, rgba(0, 39, 91, 0.04), rgba(87, 8, 139, 0.04));
+    background: var(--tag-tint);
     border-radius: var(--radius-md);
-    border-left: 3px solid var(--color-primary-light);
+    border-left: 3px solid var(--tag-color-end);
     color: var(--color-text);
     font-size: 0.9rem;
     font-weight: 500;
@@ -1612,7 +1648,7 @@
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-accent), var(--color-primary-light));
+    background: linear-gradient(135deg, var(--tag-color-start), var(--tag-color-end));
     mask-image: none;
   }
 
@@ -1632,8 +1668,7 @@
   }
 
   .rj-program-card__tags li:hover {
-    background: linear-gradient(135deg, rgba(0, 39, 91, 0.08), rgba(255, 7, 120, 0.08));
-    border-left-color: var(--color-accent);
+    background: var(--tag-hover-tint);
     transform: translateX(4px);
   }
 
