@@ -686,7 +686,7 @@
 
   .hero--inner {
     min-height: auto;
-    padding: var(--space-4xl) 0;
+    padding: var(--space-2xl) 0;
   }
 
   .hero::before {
