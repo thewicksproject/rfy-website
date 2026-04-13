@@ -427,6 +427,34 @@
     color: var(--color-primary);
   }
 
+  .translate-btn {
+    position: relative;
+  }
+
+  .translate-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-fast);
+    z-index: 10;
+  }
+
+  .translate-btn:hover::after,
+  .translate-btn:focus-visible::after {
+    opacity: 1;
+  }
+
   .translate-modal {
     display: none;
     position: fixed;
