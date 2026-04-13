@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Restorative Justice Services
-description: Alternative paths to justice that build accountability, repair harm, and empower young people at Reach For Youth.
+description: Trauma-informed, community-based restorative justice services from Reach For Youth that focus on healing, accountability, and repairing harm.
 ---
 
 <!-- HERO -->
@@ -18,13 +18,76 @@ description: Alternative paths to justice that build accountability, repair harm
   </div>
 </section>
 
-<!-- OVERVIEW -->
-<section class="section section--warm" aria-labelledby="overview-title">
+<!-- WHAT IS RESTORATIVE JUSTICE -->
+<section class="section section--warm" aria-labelledby="what-title">
   <div class="container">
-    <h2 id="overview-title" class="section-title">A Better Path <span>Forward</span></h2>
-    <p class="section-subtitle" style="max-width: 800px;">
-      Our restorative justice programs offer youth an opportunity to take responsibility for their actions, make amends, and develop the skills needed to make better choices. With a recidivism rate of just 13-15%, our programs are proven to work.
+    <h2 id="what-title" class="section-title">What Is <span>Restorative Justice?</span></h2>
+    <p class="section-subtitle" style="max-width: 820px;">
+      Restorative justice is a <strong>trauma-informed, community-based</strong> approach that focuses on <em>healing, accountability,</em> and <em>repairing harm</em>—rather than just punishment.
     </p>
+  </div>
+</section>
+
+<!-- PUNITIVE VS RESTORATIVE -->
+<section class="section" aria-labelledby="compare-title">
+  <div class="container">
+    <h2 id="compare-title" class="section-title">Punitive <span>vs. Restorative</span></h2>
+    <p class="section-subtitle" style="max-width: 780px;">
+      Traditional systems like schools and criminal systems often focus on punishment. Restorative justice focuses on accountability, healing, and repairing harm.
+    </p>
+
+    <div class="compare-grid">
+      <article class="compare-card compare-card--punitive">
+        <h3 class="compare-card__title">Punitive</h3>
+        <ul class="compare-card__list">
+          <li><strong>What rules have been broken?</strong> Harm outweighs the opportunity to heal.</li>
+          <li><strong>Who is to blame?</strong> Justice is achieved through guilt, with no acknowledgment of the victim.</li>
+          <li><strong>What consequences should be given?</strong> Accountability equals punishment—with no opportunity for repair or healing.</li>
+        </ul>
+      </article>
+
+      <article class="compare-card compare-card--restorative">
+        <h3 class="compare-card__title">Restorative</h3>
+        <ul class="compare-card__list">
+          <li><strong>Who or what has been hurt?</strong> People, relationships, and healing outweigh broken rules. Everyone has a voice.</li>
+          <li><strong>What are their needs?</strong> Justice is achieved by identifying needs and repairing harm.</li>
+          <li><strong>Who should fulfill those needs?</strong> Accountability equals understanding impact—with an opportunity for repair and positive outcomes.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="section section--warm" aria-labelledby="values-title">
+  <div class="container">
+    <h2 id="values-title" class="section-title">Our <span>Core Values</span></h2>
+    <p class="section-subtitle" style="max-width: 820px;">
+      At the core of restorative practices is the belief that every individual possesses the capacity for transformation, and every community holds the potential for healing.
+    </p>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-card__number">1</div>
+        <h3 class="value-card__title">Harm affects people and relationships</h3>
+      </div>
+      <div class="value-card">
+        <div class="value-card__number">2</div>
+        <h3 class="value-card__title">Accountability involves repairing harm</h3>
+      </div>
+      <div class="value-card">
+        <div class="value-card__number">3</div>
+        <h3 class="value-card__title">Those affected should have a voice</h3>
+      </div>
+      <div class="value-card">
+        <div class="value-card__number">4</div>
+        <h3 class="value-card__title">Healing happens through dialogue</h3>
+      </div>
+      <div class="value-card">
+        <div class="value-card__number">5</div>
+        <h3 class="value-card__title">Reintegration is key</h3>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -44,14 +107,14 @@ description: Alternative paths to justice that build accountability, repair harm
   <div class="container">
     <h2 id="programs-title" class="section-title">Our <span>Programs</span></h2>
     <p class="section-subtitle">
-      We offer a range of restorative justice services tailored to the needs of youth, families, schools, and courts.
+      Restorative practices range from everyday conversations that build trust to structured processes that repair serious harm. At RFY, we offer a continuum of services tailored to youth, families, schools, and courts.
     </p>
 
     <div class="programs-grid">
       {% for program in restorativePrograms.items %}
       <article class="program-card">
         <h3 class="program-card__title">{{ program.title }}</h3>
-        <p style="color: var(--color-text-light); margin-bottom: var(--space-md);">
+        <p class="program-card__description">
           {{ program.description }}
         </p>
         <ul class="program-card__list">
@@ -61,6 +124,31 @@ description: Alternative paths to justice that build accountability, repair harm
         </ul>
       </article>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- RESTORATIVE + CLINICAL CONNECTION -->
+<section class="section section--warm" aria-labelledby="clinical-title">
+  <div class="container">
+    <h2 id="clinical-title" class="section-title">Restorative Justice &amp; <span>Clinical Care</span></h2>
+    <p class="section-subtitle" style="max-width: 820px;">
+      The foundation of clinical work at RFY is strength-based, systemic, and trauma-informed. Restorative justice practices operate from the same philosophy—they are not separate from our clinical work, but another avenue to address conflict, harm, and healing.
+    </p>
+
+    <div class="values-grid values-grid--three">
+      <div class="value-card">
+        <h3 class="value-card__title">Build Empathy</h3>
+        <p class="value-card__text">Restorative processes help clients develop empathy and understand the impact of their actions.</p>
+      </div>
+      <div class="value-card">
+        <h3 class="value-card__title">Reduce Shame</h3>
+        <p class="value-card__text">Dialogue and accountability lower shame and defensiveness, making repair possible.</p>
+      </div>
+      <div class="value-card">
+        <h3 class="value-card__title">Repair Relationships</h3>
+        <p class="value-card__text">Clients practice accountability, rebuild trust, and process interpersonal trauma together.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -89,7 +177,7 @@ description: Alternative paths to justice that build accountability, repair harm
       <div class="process__step">
         <div class="process__step-number">3</div>
         <h3 class="process__step-title">Program Participation</h3>
-        <p class="process__step-description">Youth participates in appropriate program</p>
+        <p class="process__step-description">Youth participates in the appropriate program</p>
       </div>
 
       <div class="process__step">

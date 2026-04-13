@@ -1,43 +1,43 @@
 {
   "items": [
     {
-      "title": "Teen Court",
-      "description": "Youth-led court for first-time offenders where a peer jury determines constructive sentences focused on accountability and education.",
+      "title": "Peer Justice",
+      "description": "A student-led initiative that promotes conflict resolution and restorative justice within the school community. Trained youth leaders help their peers navigate disputes through open dialogue and collective problem-solving.",
       "features": [
-        "Operating since 1996",
-        "Peer jury determines sentences",
-        "Focuses on accountability and education",
-        "97% completion rate"
+        "Student-led mediation and interviewing",
+        "Builds accountability, empathy, and respect",
+        "Reduces repeat conflicts in schools",
+        "Creates safer, more inclusive school environments"
       ]
     },
     {
-      "title": "Peer Justice Council",
-      "description": "Youth advocates provide support, mentorship, and guidance to peers navigating the justice system.",
+      "title": "The Circle (sponsored by Teen Court)",
+      "description": "A flexible alternative to traditional juvenile justice that empowers youth to take responsibility and make better decisions. Activities are tailored to each situation to interrupt harmful patterns and keep youth out of the justice system.",
       "features": [
-        "Youth advocates supporting peers",
-        "Mentorship and guidance",
-        "Leadership development",
-        "Community service opportunities"
+        "Traditional Teen Court with peer jury",
+        "Restorative Justice Circle with family",
+        "RJ Circle or conference with person harmed",
+        "RJ Circle or conference with school"
       ]
     },
     {
-      "title": "ESP School Reintegration",
-      "description": "Comprehensive support for students returning to school from expulsion or suspension.",
+      "title": "Restorative Circles & Conferences",
+      "description": "Structured conversations that bring together those affected by conflict or harm. Circles are broader and community-inclusive; conferences are more formal and targeted to a specific incident. Both are guided by a trained facilitator.",
       "features": [
-        "Academic and behavioral support",
-        "Family engagement",
-        "Transition planning",
-        "Follow-up support services"
+        "Person who caused harm and person harmed",
+        "Community and family support members",
+        "Facilitated dialogue with a talking piece",
+        "Focus on inclusion, accountability, and repair"
       ]
     },
     {
-      "title": "Restorative Circles",
-      "description": "Community-based conflict resolution bringing together victims, offenders, and supporters.",
+      "title": "ESP — Evaluation & Support Program",
+      "description": "An alternative to expulsion and traditional juvenile justice sanctions. ESP uses positive discipline and connects youth and families with community resources to reduce disparities in discipline and support students returning to school.",
       "features": [
-        "Victim-offender dialogue",
-        "Family group conferencing",
-        "School-based circles",
-        "Community healing processes"
+        "Alternative to expulsion and suspension",
+        "Connects youth to mental health and community supports",
+        "Reduces disparities in school discipline",
+        "Supports successful school reintegration"
       ]
     }
   ]
