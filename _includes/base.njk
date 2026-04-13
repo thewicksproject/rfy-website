@@ -87,7 +87,16 @@
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <ul class="nav__list">
           <li><a href="/about/" class="nav__link{% if page.url == '/about/' %} nav__link--active{% endif %}">About Us</a></li>
-          <li><a href="/services/" class="nav__link{% if '/services' in page.url %} nav__link--active{% endif %}">Our Services</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="/services/" class="nav__link{% if '/services' in page.url %} nav__link--active{% endif %}" aria-haspopup="true" aria-expanded="false">
+              Our Services
+              <svg class="nav__dropdown-caret" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 4 5 7 8 4"></polyline></svg>
+            </a>
+            <ul class="nav__dropdown" role="menu">
+              <li role="none"><a href="/services/mental-health/" class="nav__dropdown-link" role="menuitem">Mental Health</a></li>
+              <li role="none"><a href="/services/restorative-justice/" class="nav__dropdown-link" role="menuitem">Restorative Justice</a></li>
+            </ul>
+          </li>
           <li><a href="/success-stories/" class="nav__link{% if page.url == '/success-stories/' %} nav__link--active{% endif %}">Our Success Stories</a></li>
           <li><a href="/volunteer/" class="nav__link{% if page.url == '/volunteer/' %} nav__link--active{% endif %}">Volunteer</a></li>
           <li><a href="/events/" class="nav__link{% if page.url == '/events/' %} nav__link--active{% endif %}">Events</a></li>
