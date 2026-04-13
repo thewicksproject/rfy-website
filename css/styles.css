@@ -690,6 +690,24 @@
     padding: var(--space-md) 0;
   }
 
+  .story-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .story-card-link:hover {
+    transform: translateY(-4px);
+  }
+
+  .story-card__readmore {
+    margin-top: var(--space-md);
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
   .hero::before {
     content: '';
     position: absolute;

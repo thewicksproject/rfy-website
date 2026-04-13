@@ -47,6 +47,7 @@ description: Real stories from real families whose lives have been changed throu
 
     <div class="stories-grid">
       {% for story in stories.items %}
+      {% if story.slug %}<a href="/stories/{{ story.slug }}/" class="story-card-link">{% endif %}
       <article class="story-card">
         <div class="story-card__image">
           <span class="story-card__tag story-card__tag--{{ story.tagColor }}">{{ story.program }}</span>
@@ -58,8 +59,10 @@ description: Real stories from real families whose lives have been changed throu
           <p class="story-card__quote">
             "{{ story.quote }}"
           </p>
+          {% if story.slug %}<p class="story-card__readmore">Read {{ story.name }}'s full story &rarr;</p>{% endif %}
         </div>
       </article>
+      {% if story.slug %}</a>{% endif %}
       {% endfor %}
     </div>
   </div>

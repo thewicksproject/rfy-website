@@ -2,12 +2,13 @@
   "items": [
     {
       "name": "Roger",
-      "program": "Teen Court",
+      "program": "The Circle",
       "tagColor": "green",
       "outcome": "Offender to Volunteer Advocate",
       "quote": "I want to give my peers the same opportunities I had.",
       "image": "/images/story-roger-teen-court.jpg",
-      "flipImage": true
+      "flipImage": true,
+      "slug": "roger"
     },
     {
       "name": "Courtney",
