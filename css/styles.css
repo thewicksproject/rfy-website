@@ -1438,14 +1438,14 @@
   .footer {
     background: var(--color-text);
     color: white;
-    padding: var(--space-2xl) 0 var(--space-lg);
+    padding: var(--space-lg) 0 var(--space-md);
   }
 
   .footer__grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: var(--space-xl);
-    margin-bottom: var(--space-xl);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
   }
 
   .footer__brand {
@@ -1547,7 +1547,7 @@
 
   .footer__bottom {
     border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: var(--space-md);
+    padding-top: var(--space-sm);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2004,8 +2004,24 @@
   .footer__disclaimer {
     background: rgba(255,255,255,0.05);
     border-radius: var(--radius-md);
-    padding: var(--space-lg);
-    margin-bottom: var(--space-xl);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .footer__disclaimer-title {
+    margin-bottom: var(--space-xs) !important;
+  }
+
+  .footer__disclaimer p {
+    margin-bottom: var(--space-xs) !important;
+  }
+
+  .footer__crisis-lines {
+    margin-top: var(--space-xs) !important;
+  }
+
+  .footer__crisis-lines li {
+    padding: 2px 0 !important;
   }
 
   .footer__disclaimer-title {
