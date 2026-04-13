@@ -1328,10 +1328,15 @@
      ============================================ */
 
   /* Intro image with strong drop shadow */
+  .rj-intro-image {
+    text-align: center;
+  }
+
   .rj-intro-image img {
     width: 100%;
+    max-width: 380px;
     height: auto;
-    display: block;
+    display: inline-block;
     border-radius: var(--radius-lg);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 10px 20px -5px rgba(0, 0, 0, 0.2);
   }
