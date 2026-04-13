@@ -311,6 +311,7 @@
 
   .nav__list {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: var(--space-lg);
   }
