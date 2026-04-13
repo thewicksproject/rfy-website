@@ -20,6 +20,57 @@ description: Real stories from real families whose lives have been changed throu
 
 <!-- FEATURED STORY -->
 {% if featuredStory %}
+<style>
+  .featured-story {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    .featured-story {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  .featured-story__image {
+    flex: 0 0 auto;
+    width: 220px;
+    max-width: 100%;
+  }
+  .featured-story__image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px rgba(0, 39, 91, 0.25);
+    display: block;
+  }
+  .featured-story__content {
+    flex: 1;
+  }
+  .featured-story__quote {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.4;
+    margin-bottom: var(--space-md);
+  }
+  .featured-story__text {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+  .featured-story__attribution {
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  .featured-story__attribution span {
+    color: var(--color-accent);
+  }
+</style>
 <section class="section section--warm" aria-labelledby="featured-title">
   <div class="container">
     <div class="featured-story">
