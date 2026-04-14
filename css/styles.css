@@ -637,7 +637,7 @@
      CRISIS BANNER
      ============================================ */
   .crisis-banner {
-    background: linear-gradient(90deg, var(--color-primary-dark) 0%, #1a3a6e 100%); /* Refined: warmer gradient */
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
     color: white;
     padding: var(--space-sm) 0;
     text-align: center;
