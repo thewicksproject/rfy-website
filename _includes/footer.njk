@@ -25,20 +25,6 @@
       </div>
     </div>
 
-    <!-- Locations — inline -->
-    <div class="footer__locations">
-      <div class="footer__location">
-        <strong>{{ site.offices.central.name }}</strong>
-        &nbsp;&bull;&nbsp; {{ site.offices.central.address }}, {{ site.offices.central.city }}, {{ site.offices.central.state }} {{ site.offices.central.zip }}
-        &nbsp;&bull;&nbsp; <a href="tel:{{ site.offices.central.phone | replace('-', '') }}">{{ site.offices.central.phone }}</a>
-      </div>
-      <div class="footer__location">
-        <strong>{{ site.offices.southside.name }}</strong>
-        &nbsp;&bull;&nbsp; {{ site.offices.southside.address }}, {{ site.offices.southside.city }}, {{ site.offices.southside.state }} {{ site.offices.southside.zip }}
-        &nbsp;&bull;&nbsp; <a href="tel:{{ site.offices.southside.phone | replace('-', '') }}">{{ site.offices.southside.phone }}</a>
-      </div>
-    </div>
-
     <!-- Emergency Resources — inline -->
     <div class="footer__emergency">
       <span class="footer__emergency-label">Emergency Resources:</span>
@@ -60,6 +46,20 @@
       <a href="https://iysa.indiana.edu/" target="_blank" rel="noopener noreferrer">
         <img src="/images/iysa.png" alt="Indiana Youth Services Association" class="footer__partner-logo">
       </a>
+    </div>
+
+    <!-- Locations — inline -->
+    <div class="footer__locations">
+      <div class="footer__location">
+        <strong>{{ site.offices.central.name }}</strong>
+        &nbsp;&bull;&nbsp; {{ site.offices.central.address }}, {{ site.offices.central.city }}, {{ site.offices.central.state }} {{ site.offices.central.zip }}
+        &nbsp;&bull;&nbsp; <a href="tel:{{ site.offices.central.phone | replace('-', '') }}">{{ site.offices.central.phone }}</a>
+      </div>
+      <div class="footer__location">
+        <strong>{{ site.offices.southside.name }}</strong>
+        &nbsp;&bull;&nbsp; {{ site.offices.southside.address }}, {{ site.offices.southside.city }}, {{ site.offices.southside.state }} {{ site.offices.southside.zip }}
+        &nbsp;&bull;&nbsp; <a href="tel:{{ site.offices.southside.phone | replace('-', '') }}">{{ site.offices.southside.phone }}</a>
+      </div>
     </div>
 
     <!-- Bottom -->
