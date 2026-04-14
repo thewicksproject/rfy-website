@@ -2685,7 +2685,7 @@
 
   /* Per-staff headshot position adjustments */
   .staff-bio-card__photo[src*="Kendee"] {
-    object-position: center 40%;
+    object-position: center 20%;
   }
 
   .staff-bio-card__photo[src*="Mark Sattler"] {
