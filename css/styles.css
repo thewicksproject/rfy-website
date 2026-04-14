@@ -2700,8 +2700,14 @@
     object-position: center 20%;
   }
 
+  .staff-bio-card__photo[src*="Dan"] {
+    transform: scale(1.4);
+    object-position: center 20%;
+  }
+
   .staff-bio-card__photo[src*="Denise"] {
-    object-position: center 25%;
+    transform: scale(1.4);
+    object-position: center 20%;
   }
 
   .staff-bio-card__avatar {
