@@ -1966,7 +1966,7 @@
      FOOTER
      ============================================ */
   .footer {
-    background: var(--color-text);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
     color: white;
     padding: var(--space-lg) 0 var(--space-md);
   }
