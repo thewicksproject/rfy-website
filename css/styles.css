@@ -2704,8 +2704,8 @@
     width: 140%;
     height: 140%;
     max-width: none;
-    margin: -5% 0 0 -20%;
-    object-position: center 12%;
+    margin: -10% 0 0 -20%;
+    object-position: center 35%;
   }
 
   .staff-bio-card__photo[src*="Denise"] {
