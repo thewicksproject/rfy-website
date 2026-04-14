@@ -2709,6 +2709,10 @@
   }
 
   .staff-bio-card__photo[src*="Denise"] {
+    width: 120%;
+    height: 120%;
+    max-width: none;
+    margin: -5% 0 0 -10%;
     object-position: center 25%;
   }
 
