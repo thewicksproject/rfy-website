@@ -2443,6 +2443,71 @@
   }
 
   /* ============================================
+     WHO WE SERVE CARDS
+     ============================================ */
+  .who-we-serve-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  @media (max-width: 900px) {
+    .who-we-serve-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .serve-card {
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl) var(--space-xl);
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .serve-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+
+  .serve-card--purple { background: var(--color-primary-light); }
+  .serve-card--pink   { background: var(--color-accent); }
+  .serve-card--orange { background: var(--color-accent-dark); }
+  .serve-card--navy   { background: var(--color-primary); }
+
+  .serve-card__icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-lg);
+  }
+
+  .serve-card__icon svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+    fill: white;
+  }
+
+  .serve-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: var(--space-md);
+  }
+
+  .serve-card__description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* ============================================
      VIDEO EMBED
      ============================================ */
   .video-embed {
