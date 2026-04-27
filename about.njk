@@ -150,28 +150,6 @@ description: For over 50 years, Reach For Youth has been a trusted resource for 
   </div>
 </section>
 
-<!-- HISTORY SECTION -->
-<section class="section" aria-labelledby="history-title">
-  <div class="container">
-    <h2 id="history-title" class="section-title">50+ Years of <span>Service</span></h2>
-    <p class="section-subtitle">
-      Our journey from advocacy to comprehensive youth services
-    </p>
-
-    <div class="timeline">
-      {% for item in timeline.items %}
-      <div class="timeline__item">
-        <div class="timeline__marker"></div>
-        <div class="timeline__year">{{ item.year }}</div>
-        <div class="timeline__content">
-          {{ item.content }}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- PARTNERS SECTION -->
 <section class="section section--warm" aria-labelledby="partners-title">
   <div class="container">
