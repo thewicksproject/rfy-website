@@ -2595,6 +2595,87 @@
 
 
   /* ============================================
+     YOUTH SERVICE BUREAU COMMITMENTS
+     ============================================ */
+  .ysb-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-3xl);
+  }
+
+  @media (max-width: 900px) {
+    .ysb-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .ysb-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ysb-card {
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl) var(--space-xl);
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .ysb-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+
+  .ysb-card--navy   { background: var(--color-primary); }
+  .ysb-card--purple { background: var(--color-primary-light); }
+  .ysb-card--pink   { background: var(--color-accent); }
+  .ysb-card--orange { background: var(--color-accent-dark); }
+
+  .ysb-card__number {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: var(--space-md);
+  }
+
+  .ysb-card__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+  }
+
+  .ysb-card__text strong {
+    color: white;
+  }
+
+  .ysb-statements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    border-top: 2px solid var(--color-bg-cool);
+    padding-top: var(--space-2xl);
+  }
+
+  @media (max-width: 768px) {
+    .ysb-statements {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ysb-statements p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-light);
+    padding-left: var(--space-lg);
+    border-left: 3px solid var(--color-accent);
+  }
+
+  /* ============================================
      ABOUT PAGE - Two Column Layouts
      ============================================ */
   .about-two-col {
