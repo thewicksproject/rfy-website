@@ -2758,7 +2758,7 @@
   }
 
   .about-impact__list li {
-    color: var(--color-text-light);
+    color: white;
     margin-bottom: var(--space-sm);
     font-size: 1.1rem;
     line-height: 1.7;

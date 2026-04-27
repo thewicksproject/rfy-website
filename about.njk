@@ -66,14 +66,14 @@ description: For over 50 years, Reach For Youth has been a trusted resource for 
 </section>
 
 <!-- OUR IMPACT SECTION -->
-<section class="section about-impact" aria-labelledby="impact-title">
+<section class="section about-impact" aria-labelledby="impact-title" style="background: var(--color-accent-dark);">
   <div class="container">
     <div class="about-two-col">
       <div class="about-two-col__image">
         <img src="{{ aboutContent.ourImpact.image or '/images/staff/our-impact.jpg?v=2' }}" alt="Reach For Youth youth group" class="about-photo">
       </div>
       <div class="about-two-col__text">
-        <h2 id="impact-title" class="section-title" style="text-align:left;">Our Impact</h2>
+        <h2 id="impact-title" class="section-title" style="text-align:left; color: white;">Our Impact</h2>
         <ul class="about-impact__list">
           {% for stat in aboutContent.ourImpact.stats %}
           <li>{{ stat.number }} {{ stat.label }}</li>
