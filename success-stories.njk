@@ -102,7 +102,7 @@ description: Real stories from real families whose lives have been changed throu
       <article class="story-card">
         <div class="story-card__image">
           <span class="story-card__tag story-card__tag--{{ story.tagColor }}">{{ story.program }}</span>
-          <img src="{{ story.image }}" alt="{{ story.name }}"{% if story.flipImage %} class="flip-horizontal"{% endif %}>
+          <img src="{{ story.image }}" alt="{{ story.name }}"{% if story.flipImage %} class="flip-horizontal"{% endif %}{% if story.imagePosition %} style="object-position: {{ story.imagePosition }};"{% endif %}>
         </div>
         <div class="story-card__content">
           <h3 class="story-card__name">{{ story.name }}</h3>

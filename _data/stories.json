@@ -58,6 +58,7 @@
       "quote": "Nobody knew what I was carrying. Once they did, everything changed.",
       "image": "/images/story-mark-ate-program.jpg",
       "flipImage": false,
+      "imagePosition": "top",
       "slug": "mark"
     }
   ]
